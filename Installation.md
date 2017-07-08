@@ -1,4 +1,4 @@
-The installation of `objection` [python component](components) should be relatively simple. In fact, a simple `git clone` and `pip install` will suffice. Installing `objection` from pypi will be possible soon™.
+The installation of the `objection` [python component](components) should be relatively simple. In fact, a simple `git clone` and `pip install` will suffice. Installing `objection` from pypi will be possible soon™.
 
 ## prerequisites
 Before continuing with the installation, make sure you have the following prerequisites met:
@@ -25,3 +25,5 @@ cd objection/
 ```
 pip install --editable .
 ```
+
+4. Once the dependencies are installed, the `objection` command should be available in your `PATH`. In some shells, it may be necessary to run `hash -r` before the command will be available.
