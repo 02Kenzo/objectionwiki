@@ -3,6 +3,7 @@ The installation of the `objection` [python component](components) should be rel
 # toc
 - [prerequisites](#prerequisites)
 - ['native' installation](#native-installation)
+- ['virtual' installation](#virtual-installation)
 
 ## prerequisites
 Before continuing with the installation though, make sure you have the following prerequisites met:
