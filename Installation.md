@@ -1,5 +1,9 @@
 The installation of the `objection` [python component](components) should be relatively simple. In fact, a simple `git clone` and `pip install` will suffice. Installing `objection` from pypi will be possible soon™.
 
+# toc
+- [prerequisites](#prerequisites)
+- ['native' installation](#native-installation)
+
 ## prerequisites
 Before continuing with the installation though, make sure you have the following prerequisites met:
 
