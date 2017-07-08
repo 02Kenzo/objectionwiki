@@ -48,7 +48,7 @@ The most commonly used subcommand is `explore`, which will start the `objection`
 
 The exploration REPL will autocomplete commands when the `[TAB]` key is pressed whenever possible. If you need some help, prefixing your full command with the `help` keyword will print documentation and usage examples for the command in question:
 
-```bash
+```
 skdw on (iPhone: 10.3.1) [net] # help ios hooking dump method_args
 Command: ios hooking dump method_args
 
