@@ -1,4 +1,4 @@
-The installation of `objection` itself should be relatively simple. In fact, a simple `git clone` and `pip install` will suffice. Installing `objection` using only `pip` will be possible soon™.
+The installation of `objection` python [component](#components) should be relatively simple. In fact, a simple `git clone` and `pip install` will suffice. Installing `objection` using only `pip` will be possible soon™.
 
 ## prerequisites
 Before continuing with the installation, make sure you have the following prerequisites met:
