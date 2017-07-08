@@ -4,6 +4,7 @@
 # Generic Guides
 - [Components](Components)
 - [Installation](Installation)
+- [Using objection](Using-objection)
 - [Early Instrumentation](Early-Instrumentation)
 - [Logging Information](Logging-Information)
 - [Hacking](Hacking)
