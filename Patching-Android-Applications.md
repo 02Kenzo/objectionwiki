@@ -1,0 +1,1 @@
+This article will cover the process to patch Android applications.
