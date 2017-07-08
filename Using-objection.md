@@ -3,6 +3,11 @@ This article will walk through some sample usage of `objection`. A few assumptio
 * It is assumed that you have successfully followed the [installation](installation) guide and have the `objection` command available in your `PATH`. 
 * It is also assumed that you have a successfully patched an unencrypted IPA, or added the FridaGadget to your project and deployed it to a device.
 
+## toc
+
+* [command format](command-format)
+* [getting started (ios edition)](getting-started-ios-edition)
+
 ## command format
 The `objection` command contains a number of subcommands. Certain subcommands may contain flags to set various configurations and options. To get a list of available options, run any `objection` command with the `--help` flag. For example:
 
