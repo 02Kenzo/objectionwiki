@@ -1,6 +1,9 @@
 # Table of Contents
 - [Home](Home)
 
+# Generic Guides
+- [Early Instrumentation](Early-Instrumentation)
+
 # iOS Guides
 - [Patching iOS Applications](Patching-iOS-Applications)
 
