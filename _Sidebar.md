@@ -1,7 +1,7 @@
-# Table of Contents
+## Table of Contents
 - [Home](Home)
 
-# Generic Guides
+## Generic Guides
 - [Components](Components)
 - [Installation](Installation)
 - [Using objection](Using-objection)
@@ -9,9 +9,9 @@
 - [Logging Information](Logging-Information)
 - [Hacking](Hacking)
 
-# iOS
+## iOS
 - [Patching iOS Applications](Patching-iOS-Applications)
 - [Understanding the TouchID "Bypass"](Understanding-the-TouchID-Bypass)
 
-# Android
+## Android
 - [Patching Android Applications](Patching-Android-Applications)
