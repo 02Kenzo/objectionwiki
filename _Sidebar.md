@@ -4,8 +4,6 @@
 # Generic Guides
 - [Early Instrumentation](Early-Instrumentation)
 - [Logging Information](Logging-Information)
-
-
 - [Hacking](Hacking)
 
 # iOS
