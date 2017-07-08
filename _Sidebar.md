@@ -6,8 +6,9 @@
 
 - [Hacking](Hacking)
 
-# iOS Guides
+# iOS
 - [Patching iOS Applications](Patching-iOS-Applications)
+- [Understanding the TouchID "Bypass"](Understanding-the-TouchID-Bypass)
 
-# Android Guides
+# Android
 - [Patching Android Applications](Patching-Android-Applications)
