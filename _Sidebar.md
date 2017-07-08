@@ -2,6 +2,7 @@
 - [Home](Home)
 
 # Generic Guides
+- [Components](Components)
 - [Installation](Installation)
 - [Early Instrumentation](Early-Instrumentation)
 - [Logging Information](Logging-Information)
