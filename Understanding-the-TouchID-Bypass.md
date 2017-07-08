@@ -1,0 +1,1 @@
+This article will describe how the "TouchID" bypass works, what it does **not** bypass and general things to keep in mind.
