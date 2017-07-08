@@ -1,0 +1,1 @@
+This article will cover the process needed to patch iOS device.
