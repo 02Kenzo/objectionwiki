@@ -1,0 +1,1 @@
+This article will describe the components that make up `objection`.
