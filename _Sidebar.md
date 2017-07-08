@@ -4,6 +4,8 @@
 # Generic Guides
 - [Early Instrumentation](Early-Instrumentation)
 
+- [Hacking](Hacking)
+
 # iOS Guides
 - [Patching iOS Applications](Patching-iOS-Applications)
 
