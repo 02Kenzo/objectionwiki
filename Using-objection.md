@@ -5,8 +5,8 @@ This article will walk through some sample usage of `objection`. A few assumptio
 
 ## toc
 
-* [command format](command-format)
-* [getting started (ios edition)](getting-started-ios-edition)
+* [command format](#command-format)
+* [getting started (ios edition)](#getting-started-ios-edition)
 
 ## command format
 The `objection` command contains a number of subcommands. Certain subcommands may contain flags to set various configurations and options. To get a list of available options, run any `objection` command with the `--help` flag. For example:
