@@ -43,10 +43,13 @@ Commands:
   version      Prints the current version and exists
 ```
 
-The most commonly used subcommand is `explore`, which will start the `objection` exploration REPL. Considering the options in the above `--help` output, to connect to a Frida gadget hosted on the network, one would execute `objection -N explore`:
+The most commonly used subcommand is `explore`, which will start the `objection` exploration REPL. Considering the options in the above `--help` output, to connect to a Frida gadget hosted on the network, one would execute `objection -N explore`.
+
+## getting started (ios edition)
+With a patched IPA installed to your iOS device and with the device connected to your computer via USB, the `objection` REPL may be started with the `objection explore` command:
 
 ```bash
-$ objection -N explore
+$ objection explore
 
      _     _         _   _
  ___| |_  |_|___ ___| |_|_|___ ___
@@ -60,6 +63,3 @@ $ objection -N explore
 [tab] for command suggestions
 skdw on (iPhone: 10.3.1) [net] #
 ``` 
-
-## getting started (ios edition)
-With a patched IPA installed to your iOS device, the `objection` repl may be started with the `objection explore` command.
