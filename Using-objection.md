@@ -46,33 +46,7 @@ Commands:
 
 The most commonly used subcommand is `explore`, which will start the `objection` exploration REPL. Considering the options in the above `--help` output, to connect to a Frida gadget hosted on the network, one would execute `objection -N explore`.
 
-The exploration REPL will autocomplete commands when the `[TAB]` key is pressed whenever possible. If you need some help, prefixing your full command with the `help` keyword will print documentation and usage examples for the command in question:
-
-```
-skdw on (iPhone: 10.3.1) [net] # help ios hooking dump method_args
-Command: ios hooking dump method_args
-
-Usage: ios hooking dump method_args <+/-> <class_name> <method_name>
-
-Dumps method invocations in real time, including the arguments used at the
-time. This command tries its best to convert the arguments themselves into
-readable data, but sometimes the pointers used are to data structures not
-easily converted to readable formats.
-
-When issuing this command, a few bits of information is needed to build up
-the full class that should be hooked. The needed information includes:
-   - A '+' or '-' indicating a class or instance method
-   - The ClassName in question
-   - The method name *including* the argument separators (':')
-
-All of the information you need can be sourced with the `ios hooking list *`
-commands, or using the 'class-dump' tool.
-
-Examples:
-   ios hooking dump method_args + KeychainDataManager find:
-   ios hooking dump method_args - PinnedNSURLSessionStarwarsApi getJsonResponseFrom:onSuccess:onFailure:
-skdw on (iPhone: 10.3.1) [net] #
-```
+The exploration REPL will autocomplete commands when the `[TAB]` key is pressed whenever possible. If you need some help, prefixing your full command with the `help` keyword will print documentation and usage examples for the command in question.
 
 ## getting started (ios edition)
 With a patched IPA installed to your iOS device and with the device connected to your computer via USB, the `objection` REPL may be started with the `objection explore` command:
@@ -92,6 +66,25 @@ $ objection explore
 [tab] for command suggestions
 skdw on (iPhone: 10.3.1) [net] #
 ``` 
+
+At this stage, you may now enter commands into the REPL as needed. For example, issuing the `ls` command will display a directory listing of the current directory. By default, starting the `objection` REPL will start in your applications main bundle path too.
+
+```
+skdw on (iPhone: 10.3.1) [net] # ls
+Read Access
+Write Access
+Type                   Perms  Read    Write    Owner      Group         Size  Creation                   Name
+-------------------  -------  ------  -------  ---------  ----------  ------  -------------------------  -------------------
+NSFileTypeDirectory      493  True    True     n/a (501)  staff (20)     102  2017-07-08 20:23:19 +0000  _CodeSignature
+NSFileTypeRegular        420  True    True     n/a (501)  staff (20)    8146  2017-06-27 05:34:06 +0000  AppIcon40x40@2x.png
+NSFileTypeRegular        420  True    True     n/a (501)  staff (20)  191955  2017-07-04 19:18:38 +0000  Assets.car
+NSFileTypeDirectory      493  True    True     n/a (501)  staff (20)     102  2017-07-08 20:23:19 +0000  Base.lproj
+NSFileTypeDirectory      493  True    True     n/a (501)  staff (20)     102  2017-07-08 20:23:19 +0000  Frameworks
+NSFileTypeRegular        420  True    True     n/a (501)  staff (20)    1416  2017-07-05 14:25:24 +0000  Info.plist
+NSFileTypeRegular        493  True    True     n/a (501)  staff (20)  915616  2017-07-08 20:23:19 +0000  PewPew
+NSFileTypeRegular        420  True    True     n/a (501)  staff (20)       8  2017-07-05 14:25:24 +0000  PkgInfo
+NSFileTypeRegular        420  True    True     n/a (501)  staff (20)    1673  2017-07-04 19:18:36 +0000  swapi.co.der
+```
 
 ## getting started (android edition)
 Coming soon™
