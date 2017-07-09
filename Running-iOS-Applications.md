@@ -1,1 +1,0 @@
-This article will describe how to run patched iOS applications.
