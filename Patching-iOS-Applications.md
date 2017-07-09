@@ -24,7 +24,7 @@ Once you have a developer account signed in to in XCode, you will now be able to
 
 ```
 $ security find-identity -p codesigning -v
-  1) 0C2E8200D48DD49CA12CDBF4929B52F1A282D1DA "iPhone Developer: xxxxx@gmail.com (XZ9U7UBAEL)"
+  1) 0C2E8200Dxxxx "iPhone Developer: xxxxx@gmail.com (XZ9U7UBAEL)"
      1 valid identities found
 ```
 
