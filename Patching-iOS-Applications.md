@@ -1,6 +1,6 @@
 Before you can use any of the `objection` commands on an iOS application, the application's IPA itself needs to be patched to load the `FridaGadget.dylib` on start. To patch an IPA though, a few things needs to be done in preparation, such as getting an `embedded.mobileprovision` file, as well as a code signing certificate from Apple. Once you have these, `objection` has a `pitch_ipa` subcommand that will help you take care of the rest.
 
-**Note:** Unfortunately, the only way to get a an iOS IPA patched and signed at the moment is by using a computer running macOS (maybe a hackintosh works?). If someone knows of another way, I'm all ears! :) **Only** the signing process needs macOS. Installing, running and using `objection` can be done using any other OS.
+**Note:** Unfortunately, the only way to get a an iOS IPA patched and signed at the moment is by using a computer running macOS (maybe a hackintosh works?). If someone knows of another way, I'm all ears! :) **Only** the signing process needs macOS. Installing and running the patched IPA can be done using any other OS.
 
 ## toc
 * [preparations - xcode](#preparations---xcode)
