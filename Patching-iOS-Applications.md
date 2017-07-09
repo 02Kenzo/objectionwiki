@@ -23,4 +23,13 @@ $ security find-identity -p codesigning -v
 ```
 
 ## preparations - mobileprovision
-With XCode ready we can now generate the `.mobileprovison` file we need. This file contains some certificate information as well as the entitlements groups (see the keychain article for more about this) for the application. To generate the `.mobileprovision` file, all we need to do is build and deploy a blank iOS application to an iOS device. The build process will leave a `embedded.mobileprovision` file in `~/Library/Developer/Xcode/DerivedData/` for us to pick up and re-use.
+With XCode ready we can now generate the `.mobileprovison` file we need. This file contains some certificate information as well as the entitlements groups (see the keychain article for more about this) for the application. To generate the `.mobileprovision` file, all we need to do is build and deploy a blank iOS application to an iOS device. The build process will leave a `embedded.mobileprovision` file in `~/Library/Developer/Xcode/DerivedData/` for us to pick up and re-use. When you run the `objection patch_ipa` command, it will automatically search for a valid `embedded.mobileprovision` file in `~/Library/Developer/Xcode/DerivedData/` to use.
+
+So, to build and deploy a blank iOS application using XCode to get the `embedded.mobileprovision` file:
+
+1. Start XCode and select "Create new XCode Project"
+![new](https://i.imgur.com/pgI9GjJ.png)
+2. Select "iOS" -> "Single View Application" and hit next.
+3. Fill in a Product name, choose a unique organization identifier and hit next.
+![product](https://i.imgur.com/T2takof.png)
+4. Choose where to save the project and finally click on "Create".
