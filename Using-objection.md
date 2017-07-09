@@ -130,7 +130,29 @@ NSFileTypeRegular      420  True    True     mobile (501)  mobile (501)     276 
 NSFileTypeRegular      420  True    True     mobile (501)  mobile (501)   12288  2017-07-05 19:48:01 +0000  pewpew.sqlite
 ```
 
-Interesting, a plist file named 'credentials' and a sqlite database. Let take a look at whats inside the plist:
+Interesting, a plist file named 'credentials' and a sqlite database. Let take a look at whats inside the plist. It is possible to download the raw `.plist` file from the mobile devices filesystem to your local filesystem and inspect it that way (In the example below, commands prefixed with a `!` are run as OS commands):
+
+```
+sensepost’s iPad on (iPad: 10.2.1) [usb] # download credentials.plist creds.plist
+Downloading /var/mobile/Containers/Data/Application/E2933EE7-4805-4411-A764-B1CDBFA5127C/Documents/credentials.plist to creds.plist
+
+sensepost’s iPad on (iPad: 10.2.1) [usb] # !cat creds.plist
+Running OS command: cat creds.plist
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>password</key>
+	<string>snek</string>
+	<key>username</key>
+	<string>help</string>
+</dict>
+</plist>
+
+```
+
+Or, you can use the inline helper tool that will parse the plist and dump its contents:
 
 ```
 sensepost’s iPad on (iPad: 10.2.1) [usb] # ios plist cat credentials.plist
