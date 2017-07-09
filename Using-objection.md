@@ -130,7 +130,7 @@ NSFileTypeRegular      420  True    True     mobile (501)  mobile (501)     276 
 NSFileTypeRegular      420  True    True     mobile (501)  mobile (501)   12288  2017-07-05 19:48:01 +0000  pewpew.sqlite
 ```
 
-Interesting, a plist file named 'credentials'. Let take a look at whats inside:
+Interesting, a plist file named 'credentials' and a sqlite database. Let take a look at whats inside the plist:
 
 ```
 sensepost’s iPad on (iPad: 10.2.1) [usb] # ios plist cat credentials.plist
@@ -140,7 +140,29 @@ sensepost’s iPad on (iPad: 10.2.1) [usb] # ios plist cat credentials.plist
 }
 ```
 
-This was just a small example of what is possible with `objection`. Go try it out!
+We can query the sqlite database as well to get an idea of its table structure and contents. Lets connect and have a look at the table structure first:
+
+```
+sensepost’s iPad on (iPad: 10.2.1) [usb] # sqlite connect pewpew.sqlite
+Caching local copy of database file...
+Downloading /var/mobile/Containers/Data/Application/E2933EE7-4805-4411-A764-B1CDBFA5127C/Documents/pewpew.sqlite to /var/folders/nn/7rzmzs_920n8qvff8n9nf1rm0000gn/T/tmpo88npganobjection.sqlite
+Validating SQLite database format
+Connected to SQLite database at: pewpew.sqlite
+
+sensepost’s iPad on (iPad: 10.2.1) [usb] # sqlite execute schema
+------------------------------------------------------------------
+CREATE TABLE data ( key text NOT NULL UNIQUE, value text NOT NULL)
+------------------------------------------------------------------
+```
+
+As you can see, the database contains a single table called _data_, with two columns. Lets execute a query to have a look at the data itself:
+
+```
+sensepost’s iPad on (iPad: 10.2.1) [usb] # sqlite execute query select * from data;
+-----------  -------------------------------------
+credentials  {"username":"help","password":"snek"}
+-----------  -------------------------------------
+```
 
 ## getting started (android edition)
 Coming soon™
