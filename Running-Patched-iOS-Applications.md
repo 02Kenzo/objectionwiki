@@ -6,7 +6,9 @@ For macOS users, the [ios-deploy](https://github.com/phonegap/ios-deploy) utilit
 #### ios-deploy installation
 Installing `ios-deploy` is as simple as:
 
-```npm install -g ios-deploy```
+```
+npm install -g ios-deploy
+```
 
 Once installed, you should have the `ios-deploy` command available in your `PATH`.
 
@@ -25,7 +27,7 @@ Using Linux, the only thing you will not be able to do is patch the IPA. Other t
 #### installing libimobiledevice utilities
 Using an installation of Kali Linux, the required utilities provided by `libimobiledevice` can be installed with:
 
-````
+```
 apt install ideviceinstaller libimobiledevice-utils
 ```
 
