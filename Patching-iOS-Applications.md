@@ -51,8 +51,7 @@ The next part is to prepare the commands needed for the IPA patching process. `o
 
 * `applesign` - from: https://github.com/nowsecure/node-applesign
 * `insert_dylib` - from: https://github.com/Tyilo/insert_dylib
-* `codesign` - from Xcode
-* `security` - macOS command
+* `security`, `codesign`, xcodebuild` - macOS/XCode commands
 * `zip` & `unzip` - builtin, or just installed using `homebrew`
 
 Most of these dependencies are really easy to solve as they are either already part of macOS, or can be installed using hombrew. As for `applesign` and `insert_dylib` though, those can be quickly installed as follows:
@@ -68,4 +67,30 @@ git clone https://github.com/Tyilo/insert_dylib
 cd insert_dylib
 xcodebuild
 cp build/Release/insert_dylib /usr/local/bin/insert_dylib
+```
+
+## patching - patching an IPA
+With **all** of the above dependencies solved, we can finally patch an actual IPA. The patching process itself is as simple as:
+
+```
+objection patchipa --source my-app.ipa --codesign-signature 0C2E8200Dxxxx
+```
+
+This command will extract the IPA, locate the app binary, patch it to load the FridaGadget.dylib, codesign the dylib and applications binary and repackage it for you.
+
+```
+$ objection patchipa --source my-app.ipa --codesign-signature 0C2E8200Dxxxx
+No provision file specified, searching for one...
+Found a valid provisioning file
+Working with app: myapp.app
+Creating Frameworks directory for FridaGadget...
+Updating to newest FridaGadget from: https://build.frida.re/frida/ios/lib/FridaGadget.dylib...
+Streaming dylib to ~/.objection cache...
+Codesigning FridaGadget.dylib with signature 0C2E8200Dxxxx
+Preparing IPA for codesigning...
+Codesigning patched IPA...
+Cannot find entitlements in binary. Using defaults
+
+Copying final ipa from /var/folders/nn/7rzmzs_920n8qvff8n9nf1rm0000gn/T/my-app-frida-codesigned.ipa to current directory...
+Cleaning up temp files
 ```
