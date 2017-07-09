@@ -2,6 +2,14 @@ Running patched applications on iOS devices require us to side load and run them
 
 Unfortunately, you will need macOS to patch and install the IPA. However, once installed you can launch the application using either `ios-deploy` or `idevicedebug`.
 
+## toc
+* [installing and running on macos](#installing-and-running-on-macos)
+    * [ios-deploy installation](#ios-deploy-installation)
+    * [running your application](#running-your-application)
+* [installing and running on linux](#installing-and-running-on-linux)
+    * [installing libimobiledevice utilities](#installing-libimobiledevice-utilities)
+    * [running the application](#running-the-application)
+
 ## installing and running on macOS
 For macOS users, the [ios-deploy](https://github.com/phonegap/ios-deploy) utility can handle the installation _and_ running of patched applications for you. `libimobiledevice` is available in Homebrew, so following the steps described for Linux users could be adapted for your MAC as well.
 
