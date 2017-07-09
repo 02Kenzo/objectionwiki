@@ -1,4 +1,4 @@
-There are two types of command categories within `objection`. Simply put, a command is either run as a one time common, or, as a long running 'job'.
+There are two types of command categories within `objection`. Simply put, a command is either run as a one time command, or, as a long running 'job'.
 
 A one time command gets loaded, executed and unloaded as soon as it is finished. This is often followed by some output presented in the terminal. Executing the one time command again will result in this process repeating. Examples of one time commands include `ls`, `env` and the file `upload` and `download` commands
 
