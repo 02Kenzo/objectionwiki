@@ -4,7 +4,11 @@ Running patched applications on iOS devices require us to side load and run them
 For macOS users, the [ios-deploy](https://github.com/phonegap/ios-deploy) utility can handle the installation _and_ running of patched applications for you. `libimobiledevice` is available in Homebrew, so following the steps described for Linux users could be adapted for your MAC as well.
 
 #### ios-deploy installation
-Installing `ios-deploy` is as simple as `npm install -g ios-deploy`. Once installed, you should have the `ios-deploy` command available in your `PATH`.
+Installing `ios-deploy` is as simple as:
+
+```npm install -g ios-deploy```
+
+Once installed, you should have the `ios-deploy` command available in your `PATH`.
 
 #### running your application
 To install and run your application:
@@ -20,6 +24,7 @@ Using Linux, the only thing you will not be able to do is patch the IPA. Other t
 
 #### installing libimobiledevice utilities
 Using an installation of Kali Linux, the required utilities provided by `libimobiledevice` can be installed with:
+
 ````
 apt install ideviceinstaller libimobiledevice-utils
 ```
