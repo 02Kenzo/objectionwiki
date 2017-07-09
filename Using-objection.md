@@ -64,26 +64,78 @@ $ objection explore
         by: @leonjza from @sensepost
 
 [tab] for command suggestions
-skdw on (iPhone: 10.3.1) [net] #
+sensepost’s iPad on (iPad: 10.2.1) [usb] #
 ``` 
 
 At this stage, you may now enter commands into the REPL as needed. For example, issuing the `ls` command will display a directory listing of the current directory. By default, starting the `objection` REPL will start in your applications main bundle path too.
 
 ```
-skdw on (iPhone: 10.3.1) [net] # ls
+sensepost’s iPad on (iPad: 10.2.1) [usb] # ls
+Read Access
+No Write Access
+Type                   Perms  Read    Write    Owner           Group             Size  Creation                   Name
+-------------------  -------  ------  -------  --------------  --------------  ------  -------------------------  ------------------------
+NSFileTypeRegular        420  True    False    _installd (33)  _installd (33)    8063  2017-07-09 07:58:32 +0000  AppIcon40x40@2x.png
+NSFileTypeRegular        420  True    False    _installd (33)  _installd (33)  191955  2017-07-09 07:58:33 +0000  Assets.car
+NSFileTypeDirectory      493  True    False    _installd (33)  _installd (33)     102  1970-01-01 00:00:00 +0000  Base.lproj
+NSFileTypeDirectory      493  True    False    _installd (33)  _installd (33)     102  1970-01-01 00:00:00 +0000  Frameworks
+NSFileTypeRegular        420  True    False    _installd (33)  _installd (33)    1386  2017-07-09 07:58:35 +0000  Info.plist
+NSFileTypeDirectory      493  True    False    _installd (33)  _installd (33)      68  1970-01-01 00:00:00 +0000  META-INF
+NSFileTypeRegular        493  True    False    _installd (33)  _installd (33)  936656  2017-07-09 07:58:35 +0000  PewPew
+NSFileTypeRegular        420  True    False    _installd (33)  _installd (33)       8  2017-07-09 07:58:35 +0000  PkgInfo
+NSFileTypeDirectory      493  True    False    _installd (33)  _installd (33)     102  1970-01-01 00:00:00 +0000  _CodeSignature
+NSFileTypeRegular        420  True    False    _installd (33)  _installd (33)    9498  2017-07-09 07:58:35 +0000  embedded.mobileprovision
+NSFileTypeRegular        420  True    False    _installd (33)  _installd (33)    1673  2017-07-09 07:58:31 +0000  swapi.co.der
+```
+
+Other interesting directories that relate to the application in question may be enumerated using the `env` command:
+
+```
+sensepost’s iPad on (iPad: 10.2.1) [usb] # env
+Name              System    Model    Version
+----------------  --------  -------  ---------
+sensepost’s iPad  iOS       iPad     10.2.1
+
+Name                           Path
+-----------------------------  ------------------------------------------------------------------------------------------------------------
+DocumentDirectory              /var/mobile/Containers/Data/Application/E2933EE7-4805-4411-A764-B1CDBFA5127C/Documents
+LibraryDirectory               /var/mobile/Containers/Data/Application/E2933EE7-4805-4411-A764-B1CDBFA5127C/Library
+CachesDirectory                /var/mobile/Containers/Data/Application/E2933EE7-4805-4411-A764-B1CDBFA5127C/Library/Caches
+BundlePath                     /var/containers/Bundle/Application/9FCE7485-EE1B-462E-8FC5-A49974D73F4F/PewPew.app
+ApplicationDirectory           /var/mobile/Containers/Data/Application/E2933EE7-4805-4411-A764-B1CDBFA5127C/Applications
+DemoApplicationDirectory       /var/mobile/Containers/Data/Application/E2933EE7-4805-4411-A764-B1CDBFA5127C/Applications/Demos
+DeveloperApplicationDirectory  /var/mobile/Containers/Data/Application/E2933EE7-4805-4411-A764-B1CDBFA5127C/Developer/Applications
+UserDirectory
+CoreServiceDirectory
+AutosavedInformationDirectory  /var/mobile/Containers/Data/Application/E2933EE7-4805-4411-A764-B1CDBFA5127C/Library/Autosave Information
+DesktopDirectory               /var/mobile/Containers/Data/Application/E2933EE7-4805-4411-A764-B1CDBFA5127C/Desktop
+ApplicationSupportDirectory    /var/mobile/Containers/Data/Application/E2933EE7-4805-4411-A764-B1CDBFA5127C/Library/Application Support
+ReceiptPath                    /private/var/mobile/Containers/Data/Application/E2933EE7-4805-4411-A764-B1CDBFA5127C/StoreKit/sandboxReceipt
+ResourcePath                   /var/containers/Bundle/Application/9FCE7485-EE1B-462E-8FC5-A49974D73F4F/PewPew.app
+```
+
+It is now possible to see that the _Documents_ directory lives at _/var/mobile/Containers/Data/Application/E2933EE7-4805-4411-A764-B1CDBFA5127C/Documents_, so we `cd` to that and inspect its contents:
+
+```
+sensepost’s iPad on (iPad: 10.2.1) [usb] # cd /var/mobile/Containers/Data/Application/E2933EE7-4805-4411-A764-B1CDBFA5127C/Documents
+/var/mobile/Containers/Data/Application/E2933EE7-4805-4411-A764-B1CDBFA5127C/Documents
+sensepost’s iPad on (iPad: 10.2.1) [usb] # ls
 Read Access
 Write Access
-Type                   Perms  Read    Write    Owner      Group         Size  Creation                   Name
--------------------  -------  ------  -------  ---------  ----------  ------  -------------------------  -------------------
-NSFileTypeDirectory      493  True    True     n/a (501)  staff (20)     102  2017-07-08 20:23:19 +0000  _CodeSignature
-NSFileTypeRegular        420  True    True     n/a (501)  staff (20)    8146  2017-06-27 05:34:06 +0000  AppIcon40x40@2x.png
-NSFileTypeRegular        420  True    True     n/a (501)  staff (20)  191955  2017-07-04 19:18:38 +0000  Assets.car
-NSFileTypeDirectory      493  True    True     n/a (501)  staff (20)     102  2017-07-08 20:23:19 +0000  Base.lproj
-NSFileTypeDirectory      493  True    True     n/a (501)  staff (20)     102  2017-07-08 20:23:19 +0000  Frameworks
-NSFileTypeRegular        420  True    True     n/a (501)  staff (20)    1416  2017-07-05 14:25:24 +0000  Info.plist
-NSFileTypeRegular        493  True    True     n/a (501)  staff (20)  915616  2017-07-08 20:23:19 +0000  PewPew
-NSFileTypeRegular        420  True    True     n/a (501)  staff (20)       8  2017-07-05 14:25:24 +0000  PkgInfo
-NSFileTypeRegular        420  True    True     n/a (501)  staff (20)    1673  2017-07-04 19:18:36 +0000  swapi.co.der
+Type                 Perms  Read    Write    Owner         Group           Size  Creation                   Name
+-----------------  -------  ------  -------  ------------  ------------  ------  -------------------------  -----------------
+NSFileTypeRegular      420  True    True     mobile (501)  mobile (501)     276  2017-07-09 08:01:08 +0000  credentials.plist
+NSFileTypeRegular      420  True    True     mobile (501)  mobile (501)   12288  2017-07-05 19:48:01 +0000  pewpew.sqlite
+```
+
+Interesting, a plist file named 'credentials'. Let take a look at whats inside:
+
+```
+sensepost’s iPad on (iPad: 10.2.1) [usb] # ios plist cat credentials.plist
+{
+    password = snek;
+    username = help;
+}
 ```
 
 ## getting started (android edition)
