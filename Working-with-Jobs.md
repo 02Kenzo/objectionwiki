@@ -53,4 +53,4 @@ Job: 27c38e53-4c3e-468b-8948-5c5a31dbc7d2 - Stopping
 Job: 27c38e53-4c3e-468b-8948-5c5a31dbc7d2 - Stopped
 ```
 
-Killing a job results in it finally getting unloaded, just like that last step in a one time command. When you `exit` the REPL, as part of the exit routines, all of the remaining jobs that are still running will also be unloaded.
+Killing a job results in it finally getting unloaded, just like the last step in a one time command. When you `exit` the REPL, as part of the exit routines, all of the remaining jobs that are still running will also be unloaded.
