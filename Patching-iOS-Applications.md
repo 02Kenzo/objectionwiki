@@ -7,6 +7,7 @@ Before you can use any of the `objection` commands on an iOS application, the ap
 * [preparations - mobileprovision](#preparations---mobileprovision)
 * [patching - dependencies](#patching---dependencies)
 * [patching - patching-an-ipa](#patching---patching-an-ipa)
+* [next steps](next-steps)
 
 ## preparations - xcode
 First and foremost, you need to register for an Apple Developer account. A free one works fine, but you need to keep in mind that you will only be allowed to run patched applications for 7 days, before repeating the patching/signing/installation process. 
