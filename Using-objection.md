@@ -121,6 +121,7 @@ It is now possible to see that the _Documents_ directory lives at _/var/mobile/C
 ```
 sensepost’s iPad on (iPad: 10.2.1) [usb] # cd /var/mobile/Containers/Data/Application/E2933EE7-4805-4411-A764-B1CDBFA5127C/Documents
 /var/mobile/Containers/Data/Application/E2933EE7-4805-4411-A764-B1CDBFA5127C/Documents
+
 sensepost’s iPad on (iPad: 10.2.1) [usb] # ls
 Read Access
 Write Access
@@ -152,7 +153,7 @@ Running OS command: cat creds.plist
 
 ```
 
-Or, you can use the inline helper tool that will parse the plist and dump its contents:
+Or, you can use the inline helper tool that will parse the plist and dump its contents. This is useful as it is not always possible to easily read the raw file:
 
 ```
 sensepost’s iPad on (iPad: 10.2.1) [usb] # ios plist cat credentials.plist
