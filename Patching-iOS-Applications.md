@@ -2,6 +2,12 @@ Before you can use any of the `objection` commands on an iOS application, the ap
 
 **Note:** Unfortunately, the only way to get a an iOS IPA patched and signed at the moment is by using a computer running macOS (maybe a hackintosh works?). If someone knows of another way, I'm all ears! :)
 
+## toc
+* [preparations - xcode](#preparations---xcode)
+* [preparations - mobileprovision](#preparations---mobileprovision)
+* [patching - dependencies](#patching---dependencies)
+* [#patching - patching-an-ipa](#patching---patching-an-ipa)
+
 ## preparations - xcode
 First and foremost, you need to register for an Apple Developer account. A free one works fine, but you need to keep in mind that you will only be allowed to run patched applications for 7 days, before repeating the patching/signing/installation process. 
 
