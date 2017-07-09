@@ -49,7 +49,7 @@ The most commonly used subcommand is `explore`, which will start the `objection`
 The exploration REPL will autocomplete commands when the `[TAB]` key is pressed whenever possible. If you need some help, prefixing your full command with the `help` keyword will print documentation and usage examples for the command in question.
 
 ## getting started (ios edition)
-With a patched IPA installed to your iOS device and with the device connected to your computer via USB, the `objection` REPL may be started with the `objection explore` command:
+With `objection` [installed](installation), a patched IPA installed to your iOS device and with the device connected to your computer via USB, the `objection` REPL may be started with the `objection explore` command:
 
 ```bash
 $ objection explore
@@ -66,6 +66,8 @@ $ objection explore
 [tab] for command suggestions
 sensepost’s iPad on (iPad: 10.2.1) [usb] #
 ``` 
+
+When a patched iOS application is started for the first time it will be in a paused state until you start the `objection` REPL, which will resume execution of the target application. If you need to do early instrumentation, the `explore` subcommand has the `--startup-command` and `--startup-script` arguments to help with that. Refer to the [early instrumentation](early-instrumentation) article for more information.
 
 At this stage, you may now enter commands into the REPL as needed. For example, issuing the `ls` command will display a directory listing of the current directory. By default, starting the `objection` REPL will start in your applications main bundle path:
 
