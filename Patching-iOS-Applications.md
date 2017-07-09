@@ -47,10 +47,25 @@ What this means is that you need to also trust the iTunes account you used to ru
 ## patching - dependencies
 Phew, thats quite a bit of setup work needed. Luckily, the only part you would need to redo often is to run the blank sample app on your iOS device to generate new, valid `embedded.mobileprovision` files.
 
-The next part is to prepare the commands needed for the IPA patching process. `objection patch_ipa` is a command that basically wraps around several other system commands, automating the patching process as far as possible. Naturally, a those commands need to be installed and available first. They are:
+The next part is to prepare the commands needed for the IPA patching process. `objection patch_ipa` is a command that basically wraps around several other system commands, automating the patching process as far as possible. Naturally, those commands need to be installed and available first. They are:
 
-* `applesign`
-* `insert_dylib`
-* `codesign`
-* `security`
-* `zip` & `unzip`
+* `applesign` - from: https://github.com/nowsecure/node-applesign
+* `insert_dylib` - from: https://github.com/Tyilo/insert_dylib
+* `codesign` - from Xcode
+* `security` - macOS command
+* `zip` & `unzip` - builtin, or just installed using `homebrew`
+
+Most of these dependencies are really easy to solve as they are either already part of macOS, or can be installed using hombrew. As for `applesign` and `insert_dylib` though, those can be quickly installed as follows:
+
+#### applesign
+Install with: `npm install -g node-applesign`. If you dont have `npm`, then `brew install npm` can sort you out quickly.
+
+#### insert_dylib
+Install with:
+
+```bash
+git clone https://github.com/Tyilo/insert_dylib
+cd insert_dylib
+xcodebuild
+cp build/Release/insert_dylib /usr/local/bin/insert_dylib
+```
