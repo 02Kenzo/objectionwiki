@@ -67,7 +67,7 @@ $ objection explore
 sensepost’s iPad on (iPad: 10.2.1) [usb] #
 ``` 
 
-At this stage, you may now enter commands into the REPL as needed. For example, issuing the `ls` command will display a directory listing of the current directory. By default, starting the `objection` REPL will start in your applications main bundle path too.
+At this stage, you may now enter commands into the REPL as needed. For example, issuing the `ls` command will display a directory listing of the current directory. By default, starting the `objection` REPL will start in your applications main bundle path:
 
 ```
 sensepost’s iPad on (iPad: 10.2.1) [usb] # ls
@@ -88,7 +88,7 @@ NSFileTypeRegular        420  True    False    _installd (33)  _installd (33)   
 NSFileTypeRegular        420  True    False    _installd (33)  _installd (33)    1673  2017-07-09 07:58:31 +0000  swapi.co.der
 ```
 
-Other interesting directories that relate to the application in question may be enumerated using the `env` command:
+The files in the main bundle are all available by just extracting the IPA you already have, so that in itself might not be as interesting. However, other interesting directories that relate to the application in question may be enumerated using the `env` command. This will print out the locations of the applications Library, Caches and Documents directories:
 
 ```
 sensepost’s iPad on (iPad: 10.2.1) [usb] # env
@@ -137,6 +137,8 @@ sensepost’s iPad on (iPad: 10.2.1) [usb] # ios plist cat credentials.plist
     username = help;
 }
 ```
+
+This was just a small example of what is possible with `objection`. Go try it out!
 
 ## getting started (android edition)
 Coming soon™
