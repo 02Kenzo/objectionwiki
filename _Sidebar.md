@@ -6,6 +6,7 @@
 - [Installation](Installation)
 - [Using objection](Using-objection)
 - [Early Instrumentation](Early-Instrumentation)
+- [Working with Jobs](Working-with-Jobs)
 - [Logging Information](Logging-Information)
 - [Hacking](Hacking)
 
