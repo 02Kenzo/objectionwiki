@@ -43,3 +43,14 @@ Running your blank application for the first time on an iOS device will most pro
 Verify the Developer App certificate for your account is trusted on your device. Open Settings on sensepost’s iPad and navigate to General -> Device Management, then select your Developer App certificate to trust it.
 ```
 What this means is that you need to also trust the iTunes account you used to run code on the iOS device you have.  This is pretty easy. Simply navigate to your iOS devices Settings App -> General -> Profiles & Device Management -> Select your iTunes account from the "Developer App" section -> Select "Trust".
+
+## patching - dependencies
+Phew, thats quite a bit of setup work needed. Luckily, the only part you would need to redo often is to run the blank sample app on your iOS device to generate new, valid `embedded.mobileprovision` files.
+
+The next part is to prepare the commands needed for the IPA patching process. `objection patch_ipa` is a command that basically wraps around several other system commands, automating the patching process as far as possible. Naturally, a those commands need to be installed and available first. They are:
+
+* `applesign`
+* `insert_dylib`
+* `codesign`
+* `security`
+* `zip` & `unzip`
