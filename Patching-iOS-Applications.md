@@ -12,4 +12,10 @@ To register:
 
 ![appleid](https://i.imgur.com/hKLnf9p.png)
 
-2. Sign
+Once you have a developer account signed in to in XCode, you will now be able to sideload applications and run them on iOS devices. You can also check for code signing certificates that are now available in a terminal:
+
+```
+$ security find-identity -p codesigning -v
+  1) 0C2E8200D48DD49CA12CDBF4929B52F1A282D1DA "iPhone Developer: xxxxx@gmail.com (XZ9U7UBAEL)"
+     1 valid identities found
+```
