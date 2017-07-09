@@ -9,3 +9,5 @@ The `objection` command history file can be located at:
 ```
 ~/.objection/objection_history
 ```
+
+Deleting the `~/.objection` directory should be safe to do and will be recreated the next time `objection` starts up.
