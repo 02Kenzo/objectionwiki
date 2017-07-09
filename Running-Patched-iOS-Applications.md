@@ -19,4 +19,9 @@ You should see the `lldb` debugger pop up and print out a 'success' message. The
 Using Linux, the only thing you will not be able to do is patch the IPA. Other than that, you should be able to install and run the patched IPA just fine.
 
 #### installing libimobiledevice utilities
-Using an installation of Kali Linux, the required utilities provided by `libimobiledevice` can be installed with `apt install ideviceinstaller libimobiledevice-utils`. This should make various 'idevice*' command available, such as `idevicestatus` and `ideviceinstaller`.
+Using an installation of Kali Linux, the required utilities provided by `libimobiledevice` can be installed with:
+````
+apt install ideviceinstaller libimobiledevice-utils
+```
+
+This should make various 'idevice*' command available, such as `idevicestatus` and `ideviceinstaller`.
