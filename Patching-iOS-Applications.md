@@ -33,3 +33,6 @@ So, to build and deploy a blank iOS application using XCode to get the `embedded
 3. Fill in a Product name, choose a unique organization identifier and hit next.
 ![product](https://i.imgur.com/T2takof.png)
 4. Choose where to save the project and finally click on "Create".
+5. In the projects root, under the "General" tab, ensure that there are no errors with the signing certificate. Most of the time, XCode is pretty verbose with what needs to be done to fix any errors you may encounter, so just take a moment to read.
+![settings](https://i.imgur.com/bIF6LaS.png)
+6. When done, ensure your iOS device is plugged in. Select it as the target device in the top left corner, and hit the big play button. This process will compile the blank app for the target device, and leave that `embedded.mobileprovision` file on disk for us to pick up later.
