@@ -36,7 +36,9 @@ So, to build and deploy a blank iOS application using XCode to get the `embedded
 5. In the projects root, under the "General" tab, ensure that there are no errors with the signing certificate. Most of the time, XCode is pretty verbose with what needs to be done to fix any errors you may encounter, so just take a moment to read.
 ![settings](https://i.imgur.com/bIF6LaS.png)
 6. When done, ensure your iOS device is plugged in. Select it as the target device in the top left corner, and hit the big play button. This process will compile the blank app for the target device, and leave that `embedded.mobileprovision` file on disk for us to pick up later.
-7. Running your blank application for the first time on an iOS device will most probably result in a error that reads something like:
+7. Trust your iTunes account to run code on your iOS device.
+
+Running your blank application for the first time on an iOS device will most probably result in a error that reads something like:
 ```
 Verify the Developer App certificate for your account is trusted on your device. Open Settings on sensepost’s iPad and navigate to General -> Device Management, then select your Developer App certificate to trust it.
 ```
