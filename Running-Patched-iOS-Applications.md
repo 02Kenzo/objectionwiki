@@ -31,4 +31,4 @@ Using an installation of Kali Linux, the required utilities provided by `libimob
 apt install ideviceinstaller libimobiledevice-utils
 ```
 
-This should make various 'idevice*' command available, such as `idevicestatus` and `ideviceinstaller`.
+This should make various 'idevice*' commands available, such as `idevicestatus` and `ideviceinstaller`.
