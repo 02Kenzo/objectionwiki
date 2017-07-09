@@ -103,4 +103,4 @@ Cleaning up temp files
 ```
 
 ## next steps
-Once you have a patched IPA, its time to move on to running your patched IPA!
+Once you have a patched IPA, its time to move on to running your patched IPA! See the following article for more information: [Running Patched iOS Applications](Running-Patched-iOS-Applications).
