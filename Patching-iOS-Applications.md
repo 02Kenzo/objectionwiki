@@ -21,3 +21,6 @@ $ security find-identity -p codesigning -v
   1) 0C2E8200D48DD49CA12CDBF4929B52F1A282D1DA "iPhone Developer: xxxxx@gmail.com (XZ9U7UBAEL)"
      1 valid identities found
 ```
+
+## preparations - mobileprovision
+With XCode ready we can now generate the `.mobileprovison` file we need. This file contains some certificate information as well as the entitlements groups (see the keychain article for more about this) for the application. To generate the `.mobileprovision` file, all we need to do is build and deploy a blank iOS application to an iOS device. The build process will leave a `embedded.mobileprovision` file in `~/Library/Developer/Xcode/DerivedData/` for us to pick up and re-use.
