@@ -100,3 +100,6 @@ Cannot find entitlements in binary. Using defaults
 Copying final ipa from /var/folders/nn/7rzmzs_920n8qvff8n9nf1rm0000gn/T/my-app-frida-codesigned.ipa to current directory...
 Cleaning up temp files
 ```
+
+## next steps
+Once you have a patched IPA, its time to move on to running your patched IPA!
