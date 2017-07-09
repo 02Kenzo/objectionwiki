@@ -11,7 +11,7 @@ To combat this, the `explore` subcommand (that starts the REPL) provides two opt
 **Note:** When running within the REPL, hooks that are run attempt to take care to catch any errors that have occurred and report them. When running your own Frida scripts, these protections are not automatically added. Take special care when developing hooks that you catch errors and report in them to make debugging easier!
 
 ## examples
-As an example, lets look at a sample iOS application that performs jailbreak detection as soon as the application has started up. I want to test the behaviour of the application when it thinks it is running on a jailbroken device, so I need to run the `ios jailbreak simulate` command. As previously mentioned, normal startup of the `exploration` REPL does not give one enough time to apply the hooks for this, so we will use the early instrumentation example!
+Lets look at a sample iOS application that performs jailbreak detection as soon as the application has started up. I want to test the behaviour of the application when it thinks it is running on a jailbroken device, so I need to run the `ios jailbreak simulate` command. As previously mentioned, normal startup of the `exploration` REPL does not give one enough time to apply the hooks for this, so we will use the early instrumentation.
 
 It will work as follows. I start the patched application with a debugger attached which will result in the execution flow pausing. Then we start the `exploration` REPL with a `--startup-command` :
 
