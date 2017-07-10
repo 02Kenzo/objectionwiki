@@ -8,6 +8,7 @@ Unfortunately, you will need macOS to patch the IPA. However, once patched, the 
     * [running your application](#running-your-application)
 * [installing and running on linux](#installing-and-running-on-linux)
     * [installing libimobiledevice utilities](#installing-libimobiledevice-utilities)
+    * [installing the application](#installing-the-application)
     * [running the application](#running-the-application)
 
 ## installing and running on macOS
