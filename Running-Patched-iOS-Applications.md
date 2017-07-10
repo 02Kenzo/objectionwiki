@@ -1,6 +1,6 @@
 Running patched applications on iOS devices require us to side load and run them using external tools. For macOS users, `ios-deploy` is perfect for this. For Linux users, the `libimobiledevice` project provides commands to perform similar tasks.
 
-Unfortunately, you will need macOS to patch and install the IPA. However, once installed you can launch the application using either `ios-deploy` or `idevicedebug`.
+Unfortunately, you will need macOS to patch the IPA. However, once patched, the IPA can be installed and run using `idevicedebug` on Linux.
 
 ## toc
 * [installing and running on macos](#installing-and-running-on-macos)
