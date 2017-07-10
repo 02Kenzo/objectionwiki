@@ -32,15 +32,15 @@ To install and run your application:
 You should see the `lldb` debugger pop up and print out a 'success' message. The application you are running will appear to be in a 'frozen' state for a while. This is because the Frida gadget takes some time to finish loading. After some time, you should be able to run `objection explore` and land in a successfully connected prompt :)
 
 ## installing and running on Linux
-Using Linux, the application needs to be already patched and installed on your iOS device.
+Using Linux, [libimobiledevice](http://www.libimobiledevice.org/) is a great set of tools to accomplish the IPA installation and running thereof.
+
+**NOTE:** Unfortunately, I just cant get `ideviceinstaller` to work on Kali Linux. If anyone has some insight, or can get it to work, _please_ let me know!
 
 #### installing libimobiledevice utilities
-Using an installation of Kali Linux, the required utilities provided by `libimobiledevice` can be installed with:
+Depending on your distribution, `libimobiledevice` and `ideviceinstaller` may already be in its package repositories. Using an installation of Kali Linux, the required utilities provided by `libimobiledevice` can be installed with `apt install libimobiledevice-utils ideviceinstaller`.
 
-```
-apt install libimobiledevice-utils
-```
-
+Using Arch linux, `pacman` can be used to install `libimobiledevice` from 'Extras', and AUR used to install [ideviceinstaller](https://aur.archlinux.org/packages/ideviceinstaller-git/).
+ 
 This should make various 'idevice*' commands available, such as `idevicestatus` and `idevicedebug`.
 
 #### running the application
