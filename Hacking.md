@@ -12,9 +12,9 @@ Lets take a quick look at the project structure.
 Command line argument parsing is handled with [click](http://click.pocoo.org/5/), the REPL is handled by [python-prompt-toolkit](https://github.com/jonathanslenders/python-prompt-toolkit) and hook compilation (basically adding the global error handler per runtime) is handled with [jinja](http://jinja.pocoo.org/docs/2.9/).
 
 ### code locations
-Python methods to invoke when matched to a command live in [objection/commands](https://github.com/sensepost/objection/tree/master/objection/commands).  
-Frida hooks to load and execute live in their runtime specific directories in [objection/hooks](https://github.com/sensepost/objection/tree/master/objection/hooks).  
-Classes and methods responsible for the command line interface, as well as the REPL live in [objection/console](https://github.com/sensepost/objection/tree/master/objection/console).  
+* Python methods to invoke when matched to a command live in [objection/commands](https://github.com/sensepost/objection/tree/master/objection/commands).
+* Frida hooks to load and execute live in their runtime specific directories in [objection/hooks](https://github.com/sensepost/objection/tree/master/objection/hooks).
+* Classes and methods responsible for the command line interface, as well as the REPL live in [objection/console](https://github.com/sensepost/objection/tree/master/objection/console).
 
 ## REPL command flow
 When a command is entered in the `objection explore` REPL, the [`run_command()`](https://github.com/sensepost/objection/blob/master/objection/console/repl.py#L131) method is run to process the string input received from `prompt_toolkit`. The `run_command()` method 'explodes' the received command, honoring quotes just like a shell would, and tries to find a python method to execute with [`_find_command_exec_method `](https://github.com/sensepost/objection/blob/master/objection/console/repl.py#L200).
