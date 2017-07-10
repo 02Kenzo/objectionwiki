@@ -14,6 +14,7 @@
 - [Patching iOS Applications](Patching-iOS-Applications)
 - [Running Patched iOS Applications](Running-Patched-iOS-Applications)
 - [Understanding the TouchID "Bypass"](Understanding-the-TouchID-Bypass)
+- [Notes About The Keychain Dumper](Notes-About-The-Keychain-Dumper)
 
 ## Android
 - [Patching Android Applications](Patching-Android-Applications)
