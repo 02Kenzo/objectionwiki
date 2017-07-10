@@ -2,8 +2,9 @@
 
 ![objection](https://i.imgur.com/SwmFT5O.png)
 
-This wiki contains more information about how to install, use and understand `objection`. Articles of interest include:
+This wiki contains more information about how to install, use and understand `objection`. 
 
+#### quick links
 * [Installation](Installation)
 * [Using objection](Using-objection)
 * [Patching iOS Applications](Patching-iOS-Applications)
