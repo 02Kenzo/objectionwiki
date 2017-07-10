@@ -45,9 +45,37 @@ Of course, you can also compile the utilities from source, grabbing libimobilede
  
 Once installed, various 'idevice*' commands should be available, such as `idevicestatus` and `idevicedebug`.
 
+#### installing the application
+Installing an IPA from a Linux based host can be done with `ideviceinstaller`, installed in the previous step. All you need is the unlocked, connected iOS device and the IPA to install. In our case, the IPA is the one we patched and code signed as described in the [Patching iOS Applications](Patching-iOS-Applications) article.
+
+To install your patched IPA, simply run:
+```
+$ ideviceinstaller -i my-app-frida-codesigned.ipa
+WARNING: could not locate iTunesMetadata.plist in archive!
+Copying 'my-app-frida-codesigned.ipa' to device... DONE.
+Installing 'com.sensepost.myapp'
+Install: CreatingStagingDirectory (5%)
+Install: ExtractingPackage (15%)
+Install: InspectingPackage (20%)
+Install: TakingInstallLock (20%)
+Install: PreflightingApplication (30%)
+Install: InstallingEmbeddedProfile (30%)
+Install: VerifyingApplication (40%)
+Install: CreatingContainer (50%)
+Install: InstallingApplication (60%)
+Install: PostflightingApplication (70%)
+Install: SandboxingApplication (80%)
+Install: GeneratingApplicationMap (90%)
+Install: Complete
+```
+
+Once this process is complete, the application should be available on the iOS devices home screen. Special note should be taken on the line that reads `Installing 'com.sensepost.myapp'`. This is telling you what the "bundle identifier" is for the application you are installing. You will need this to run the application itself.
+
 #### running the application
 Ro tun the application, simply run the `idevicedebug` command, specifying the bundle identifier for the app as the last argument. So, if we were to run a SensePost application:
 
 ```
-idevicedebug -d run com.sensepost.app
+idevicedebug -d run com.sensepost.myapp
 ```
+
+And thats it. You can now connect the `objection explore` REPL!
