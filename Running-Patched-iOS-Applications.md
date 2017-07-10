@@ -40,8 +40,10 @@ Using Linux, [libimobiledevice](http://www.libimobiledevice.org/) is a great set
 Depending on your distribution, `libimobiledevice` and `ideviceinstaller` may already be in its package repositories. Using an installation of Kali Linux, the required utilities provided by `libimobiledevice` can be installed with `apt install libimobiledevice-utils ideviceinstaller`.
 
 Using Arch linux, `pacman` can be used to install `libimobiledevice` from 'Extras', and AUR used to install [ideviceinstaller](https://aur.archlinux.org/packages/ideviceinstaller-git/).
+
+Of course, you can also compile the utilities from source, grabbing libimobiledevice from [here](https://github.com/libimobiledevice/libimobiledevice) and ideviceinstaller from [here](https://github.com/libimobiledevice/ideviceinstaller).
  
-This should make various 'idevice*' commands available, such as `idevicestatus` and `idevicedebug`.
+Once installed, various 'idevice*' commands should be available, such as `idevicestatus` and `idevicedebug`.
 
 #### running the application
 Ro tun the application, simply run the `idevicedebug` command, specifying the bundle identifier for the app as the last argument. So, if we were to run a SensePost application:
