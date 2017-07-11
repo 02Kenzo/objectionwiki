@@ -1,4 +1,4 @@
-`objection` is made up of two primary components.
+`objection` is made up of three primary components.
 
 * The first component is the [Frida Gadget](https://www.frida.re/) that starts up with a patched mobile application. Frida is responsible for most of the _magic_ under the hood, running the hooks provided by `objection` ultimately making this tool possible in the first place.
 
