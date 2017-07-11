@@ -1,7 +1,7 @@
 This article will walk through some sample usage of `objection`. A few assumptions are made:
 
 * It is assumed that you have successfully followed the [installation](installation) guide and have the `objection` command available in your `PATH`. 
-* It is also assumed that you have successfully patched your application (ie: [an IPA](https://github.com/sensepost/objection/wiki/Patching-iOS-Applications)), or added the FridaGadget to your project and deployed it to a device.
+* It is also assumed that you have successfully patched your application (ie: [an IPA](Patching-iOS-Applications)), or added the FridaGadget to your project and deployed it to a device.
 
 ## toc
 
@@ -49,7 +49,7 @@ The most commonly used subcommand is `explore`, which will start the `objection`
 The exploration REPL will autocomplete commands when the `[TAB]` key is pressed whenever possible. If you need some help, prefixing your full command with the `help` keyword will print documentation and usage examples for the command in question.
 
 ## getting started (ios edition)
-With `objection` [installed](installation), a patched IPA installed to your iOS device and with the device connected to your computer via USB, the `objection` REPL may be started with the `objection explore` command:
+With `objection` [installed](installation), a [patched IPA](Patching-iOS-Applications) installed to your iOS device and with the device connected to your computer via USB, the `objection` REPL may be started with the `objection explore` command:
 
 ```bash
 $ objection explore
