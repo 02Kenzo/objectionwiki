@@ -1,4 +1,4 @@
-The installation of the `objection` [python component](components) should be relatively simple. In fact, a simple `git clone` and `pip install` will suffice. Installing `objection` from pypi will be possible soon™.
+The installation of the `objection` [python component](components) should be relatively simple. In fact, a simple  `pip install` will suffice.
 
 # toc
 - [prerequisites](#prerequisites)
@@ -17,21 +17,12 @@ By 'native', we are referring to a non-`virtualenv` installation, where all of t
 
 1. Make sure your system meets the [prerequisites](#prerequisites) detailed in the previous section.
 
-2. Next, clone this repository:
+2. Next, start the installation using `pip` with:
 ```
-git clone https://github.com/sensepost/objection.git
-```
-
-3. Once cloned, `cd` to the new `objection` directory, and install the dependencies using `pip`. We will also pass on the `--editable` flag (until `objection` is uploaded to pypi) so that future updates are as simple as as `git pull`:
-```
-cd objection/
+pip install -U objection
 ```
 
-```
-pip install --editable .
-```
-
-4. Once the dependencies are installed, the `objection` command should be available in your `PATH`. In some shells, it may be necessary to run `hash -r` before the command will be available.
+3. Once the dependencies are installed, the `objection` command should be available in your `PATH`. In some shells, it may be necessary to run `hash -r` before the command will be available.
 
 ## 'virtual' installation
 By 'virtual', we are referring to the fact that `objection` will be installed in an isolated python virtual environment. For many, this is the preferred option as `objection` dependencies will have no effect on any locally installed dependencies.
@@ -48,18 +39,9 @@ virtualenv --python=python3 ~/virtual-python3
 source ~/virtual-python3
 ```
 
-4. Next, clone this repository:
-```bash
-git clone https://github.com/sensepost/objection.git
+4. Next, start the installation using `pip` with:
+```
+pip install -U objection
 ```
 
-5. Once cloned, `cd` to the new `objection` directory, and install the dependencies using `pip`. We will also pass on the `--editable` flag (until `objection` is uploaded to pypi) so that future updates are as simple as as `git pull`:
-```
-cd objection/
-```
-
-```
-pip install --editable .
-```
-
-4. Once the dependencies are installed, the `objection` command should be available in your `PATH` every time you activate your virtual environment. In some shells, it may be necessary to run `hash -r` before the command will be available.
+5. Once the dependencies are installed, the `objection` command should be available in your `PATH`. In some shells, it may be necessary to run `hash -r` before the command will be available.
