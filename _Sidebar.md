@@ -4,6 +4,7 @@
 ## Generic Guides
 - [Components](Components)
 - [Installation](Installation)
+- [Updating](Updating)
 - [Using objection](Using-objection)
 - [Early Instrumentation](Early-Instrumentation)
 - [Working with Jobs](Working-with-Jobs)
