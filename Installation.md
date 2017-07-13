@@ -4,6 +4,7 @@ The installation of the `objection` [python component](components) should be rel
 - [prerequisites](#prerequisites)
 - ['native' installation](#native-installation)
 - ['virtual' installation](#virtual-installation)
+- [errors](#errors)
 
 ## prerequisites
 Before continuing with the installation though, make sure you have the following prerequisites met:
@@ -45,3 +46,15 @@ pip install -U objection
 ```
 
 5. Once the dependencies are installed, the `objection` command should be available in your `PATH`. In some shells, it may be necessary to run `hash -r` before the command will be available.
+
+## errors
+The most common error you are likely to face is one that might look as follows:
+
+```
+~ # pip install objection
+Collecting objection
+  Could not find a version that satisfies the requirement objection (from versions: )
+No matching distribution found for objection
+```
+
+This means that you are trying to install `objection` using Python 2 and not Python 3. Either change your interpreter to Python 3, or activate a new [virtual environment](#virtual-installation).
