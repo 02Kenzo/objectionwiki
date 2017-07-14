@@ -1,4 +1,4 @@
-The installation of the `objection` [python component](components) should be relatively simple. In fact, a simple  `pip install` will suffice.
+The installation of the `objection` [python component](components) should be relatively simple. In fact, a simple  `pip3 install objection` will suffice.
 
 # toc
 - [prerequisites](#prerequisites)
