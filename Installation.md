@@ -10,7 +10,7 @@ The installation of the `objection` [python component](components) should be rel
 Before continuing with the installation though, make sure you have the following prerequisites met:
 
 - `python` version 3.3+. Check your version with: `python -V`, upgrade/install using your distributions package manager.
-- `pip` version 9.0. Check your version with: `pip --version`, upgrade with: `pip install pip --upgrade`.
+- `pip3` version 9.0+. Check your version with: `pip --version`, upgrade with: `pip install pip --upgrade`.
 - (_optionally_) `virtualenv` version 15+. Check your version with: `virtualenv --version`, upgrade/install with: `pip install virtualenv --upgrade`.
 
 ## 'native' installation
@@ -20,7 +20,7 @@ By 'native', we are referring to a non-`virtualenv` installation, where all of t
 
 2. Next, start the installation using `pip` with:
 ```
-pip install -U objection
+pip3 install -U objection
 ```
 
 3. Once the dependencies are installed, the `objection` command should be available in your `PATH`. In some shells, it may be necessary to run `hash -r` before the command will be available.
@@ -42,7 +42,7 @@ source ~/virtual-python3
 
 4. Next, start the installation using `pip` with:
 ```
-pip install -U objection
+pip3 install -U objection
 ```
 
 5. Once the dependencies are installed, the `objection` command should be available in your `PATH`. In some shells, it may be necessary to run `hash -r` before the command will be available.
@@ -57,4 +57,4 @@ Collecting objection
 No matching distribution found for objection
 ```
 
-This means that you are trying to install `objection` using Python 2 and not Python 3. Either change your interpreter to Python 3, or activate a new [virtual environment](#virtual-installation).
+This means that you are trying to install `objection` using Python 2 and not Python 3. Either change your interpreter to Python 3, try and install using `pip3` and not `pip` or activate a new [virtual environment](#virtual-installation).
