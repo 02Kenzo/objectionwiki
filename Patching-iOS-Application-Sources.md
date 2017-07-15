@@ -55,3 +55,10 @@ If one of those errors relate to something like "FridaGadget.dylib does not cont
 For this specific error, it can be resolved by navigating to the projects root again, selecting _Build Settings_ and flipping the _Enable Bitcode_ to _No_.
 
 ![fixedbitcode](https://i.imgur.com/01tM7wo.png)
+
+## connect objection
+Once the application has built successfully, you can deploy it on an iOS device (or the simulator), watching the console for when the Frida gadget as booted and is waiting for connections.
+
+![fridalistening](https://i.imgur.com/kB0H3KL.png)
+
+Once this has happened, `objection explore` away!
