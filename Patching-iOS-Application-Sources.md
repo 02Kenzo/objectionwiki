@@ -38,8 +38,6 @@ Next, within Xcode we need to locate the projects `AppDelegate.m` file. We are g
 
 A new prompt will show with some options. Make sure you select _Copy items of needed_ and _Create folder references_. When done, you should see a new `Frameworks` folder next to the `AppDelegate.m` file.
 
-![newframeworks](https://i.imgur.com/kBBp4wK.png)
-
 ## link library
 With the Frameworks folder and therefore the Frida gadget added to the project, its time to tell Xcode to link the new dylib to the library. To do this, Navigate to the project's root on the left, and select the _Build Phases_ tab on the top right. Find the section title _Link Binary With Libraries_ and drag the dylib from the Frameworks folder on the left of Xcode to the existing list.
 
