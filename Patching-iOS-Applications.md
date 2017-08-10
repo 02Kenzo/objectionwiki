@@ -30,7 +30,7 @@ $ security find-identity -p codesigning -v
 ```
 
 ## preparations - mobileprovision
-With XCode ready we can now generate the `.mobileprovison` file we need. This file contains some certificate information as well as the entitlements groups (see the keychain article for more about this) for the application. To generate the `.mobileprovision` file, all we need to do is build and deploy a blank iOS application to an iOS device. The build process will leave a `embedded.mobileprovision` file in `~/Library/Developer/Xcode/DerivedData/` for us to pick up and re-use. When you run the `objection patch_ipa` command, it will automatically search for a valid `embedded.mobileprovision` file in `~/Library/Developer/Xcode/DerivedData/` to use.
+With XCode ready we can now generate the `.mobileprovison` file we need. This file contains some certificate information as well as the entitlements groups (see the keychain article for more about this) for the application. To generate the `.mobileprovision` file, all we need to do is build and deploy a blank iOS application to an iOS device. The build process will leave a `embedded.mobileprovision` file in `~/Library/Developer/Xcode/DerivedData/` for us to pick up and re-use. When you run the `objection patchipa` command, it will automatically search for a valid `embedded.mobileprovision` file in `~/Library/Developer/Xcode/DerivedData/` to use.
 
 So, to build and deploy a blank iOS application using XCode to get the `embedded.mobileprovision` file:
 
@@ -54,14 +54,14 @@ What this means is that you need to also trust the iTunes account you used to ru
 ## patching - dependencies
 Phew, thats quite a bit of setup work needed. Luckily, the only part you would need to redo often is to run the blank sample app on your iOS device to generate new, valid `embedded.mobileprovision` files.
 
-The next part is to prepare the commands needed for the IPA patching process. `objection patch_ipa` is a command that basically wraps around several other system commands, automating the patching process as far as possible. Naturally, those commands need to be installed and available first. They are:
+The next part is to prepare the commands needed for the IPA patching process. `objection patchipa` is a command that basically wraps around several other system commands, automating the patching process as far as possible. Naturally, those commands need to be installed and available first. They are:
 
 * `applesign` - from: https://github.com/nowsecure/node-applesign
 * `insert_dylib` - from: https://github.com/Tyilo/insert_dylib
 * `security`, `codesign`, xcodebuild` - macOS/XCode commands
 * `zip` & `unzip` - builtin, or just installed using `homebrew`
 
-Most of these dependencies are really easy to solve as they are either already part of macOS, or can be installed using hombrew. As for `applesign` and `insert_dylib` though, those can be quickly installed as follows:
+Most of these dependencies are really easy to solve as they are either already part of macOS, or can be installed using `homebrew`. As for `applesign` and `insert_dylib` though, those can be quickly installed as follows:
 
 #### applesign
 Install with: `npm install -g node-applesign`. If you dont have `npm`, then `brew install npm` can sort you out quickly.
