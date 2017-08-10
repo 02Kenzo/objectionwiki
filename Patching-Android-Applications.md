@@ -1,1 +1,49 @@
-This article will cover the process to patch Android applications.
+Before you can use any of the `objection` commands on an Android application, the application's APK itself needs to be patched and code signed to load the `frida-gadget.so` on start. To patch an APK though, it should be as simple as running the `objection patchapk` command.
+
+## toc
+* [patching - dependencies](#patching---dependencies)
+* [patching - patching-an-apk](#patching---patching-an-apk)
+* [next steps](#next-steps)
+
+## patching - dependencies
+The `objection patchapk` is a command that basically wraps around several other system commands, automating the patching process as far as possible. Naturally, those commands need to be installed and available first. They are:
+
+* `aapt` - from: http://elinux.org/Android_aapt
+* `adb` - from: https://developer.android.com/studio/command-line/adb.html
+* `jarsigner` - from: http://docs.oracle.com/javase/7/docs/technotes/tools/windows/jarsigner.html
+* `apktool` - from: https://ibotpeaches.github.io/Apktool/
+
+Most of these dependencies are really easy to solve and can be installed using `homebrew` on macOS, or `apt` in Kali Linux. 
+
+## patching - patching an APK
+With **all** of the above dependencies solved, we can finally patch an actual APK. The patching process itself is as simple as:
+
+```
+objection patchapk --source app-release.apk
+```
+
+This command will determine the target architecture of your device using `adb`, extract the source APK, insert the INTERNET permission if it does not already exist, patch and embed the `frida-gadget.so` and repackage and sign a new APK for you.
+
+```
+$ objection patchapk --source app-release.apk               
+No architecture specified. Determining it using `adb`...
+Detected the architecture as: armeabi-v7a
+Using Gadget version: 10.3.14
+Unpacking app-release.apk
+App already has android.permission.INTERNET
+Reading smali from: /tmp/tmpq9hpoh87.apktemp/smali/com/sensepost/apewpew/MainActivity.smali
+Injecting loadLibrary call at line: 10
+Writing patched smali back to: /tmp/tmpq9hpoh87.apktemp/smali/com/sensepost/apewpew/MainActivity.smali
+Creating library path: /tmp/tmpq9hpoh87.apktemp/lib/armeabi-v7a
+Copying Frida gadget to libs path...
+Rebuilding the APK with the frida-gadget loaded...
+Built new APK with injected loadLibrary and frida-gadget
+Signing new APK.
+Signed the new APK
+Copying final apk from /tmp/tmpq9hpoh87.apktemp.objection.apk to current directory...
+Cleaning up temp files...
+
+```
+
+## next steps
+Once you have a patched APK ready, its time to install it. See the #TODO article for more information.
