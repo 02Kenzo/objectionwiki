@@ -14,7 +14,7 @@ Before continuing with the installation though, make sure you have the following
 - (_optionally_) `virtualenv` version 15+. Check your version with: `virtualenv --version`, upgrade/install with: `pip install virtualenv --upgrade`.
 
 ## 'native' installation
-By 'native', we are referring to a non-`virtualenv` installation, where all of the `objection` dependencies will be installed in your operating systems module path. There is nothing wrong with this really, but some may prefer to have isolated environments for certain programs. If this is you, check out the next section.
+By 'native', we are referring to a non-`virtualenv` installation, where all of the `objection` dependencies will be installed in your operating systems python module path. There is nothing wrong with this really, but some may prefer to have isolated environments for certain programs. If this is you, check out the next section.
 
 1. Make sure your system meets the [prerequisites](#prerequisites) detailed in the previous section.
 
