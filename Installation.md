@@ -18,7 +18,7 @@ By 'native', we are referring to a non-`virtualenv` installation, where all of t
 
 1. Make sure your system meets the [prerequisites](#prerequisites) detailed in the previous section.
 
-2. Next, start the installation using `pip` with:
+2. Next, start the installation using `pip3` with:
 ```
 pip3 install -U objection
 ```
@@ -26,7 +26,7 @@ pip3 install -U objection
 3. Once the dependencies are installed, the `objection` command should be available in your `PATH`. In some shells, it may be necessary to run `hash -r` before the command will be available.
 
 ## 'virtual' installation
-By 'virtual', we are referring to the fact that `objection` will be installed in an isolated python virtual environment. For many, this is the preferred option as `objection` dependencies will have no effect on any locally installed dependencies.
+By 'virtual', we are referring to the fact that `objection` will be installed in an isolated python virtual environment. For many, this is the preferred option as `objection` dependencies will have no effect on any locally installed dependencies within the operating systems module path.
 
 1. Make sure your system meets the [prerequisites](#prerequisites) detailed in the previous section, including the `virtualenv` command.
 
@@ -40,7 +40,7 @@ virtualenv --python=python3 ~/virtual-python3
 source ~/virtual-python3
 ```
 
-4. Next, start the installation using `pip` with:
+4. Next, start the installation using `pip3` with:
 ```
 pip3 install -U objection
 ```
@@ -50,8 +50,8 @@ pip3 install -U objection
 ## errors
 The most common error you are likely to face is one that might look as follows:
 
-```
-~ # pip install objection
+``
+~ # pip3 install objection
 Collecting objection
   Could not find a version that satisfies the requirement objection (from versions: )
 No matching distribution found for objection
