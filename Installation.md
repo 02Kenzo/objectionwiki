@@ -9,7 +9,7 @@ The installation of the `objection` [python component](components) should be rel
 ## prerequisites
 Before continuing with the installation though, make sure you have the following prerequisites met:
 
-- `python` version 3.3+. Check your version with: `python -V`, upgrade/install using your distributions package manager.
+- `python` version 3.4+. Check your version with: `python -V`, upgrade/install using your distributions package manager.
 - `pip3` version 9.0+. Check your version with: `pip --version`, upgrade with: `pip install pip --upgrade`.
 - (_optionally_) `virtualenv` version 15+. Check your version with: `virtualenv --version`, upgrade/install with: `pip install virtualenv --upgrade`.
 
