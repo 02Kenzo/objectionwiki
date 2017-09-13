@@ -9,6 +9,7 @@
 - [Early Instrumentation](Early-Instrumentation)
 - [Working with Jobs](Working-with-Jobs)
 - [Logging Information](Logging-Information)
+- [Resources](Resources)
 - [Hacking](Hacking)
 
 ## iOS
