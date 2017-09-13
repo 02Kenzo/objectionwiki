@@ -64,7 +64,7 @@ The next part is to prepare the commands needed for the IPA patching process. `o
 Most of these dependencies are really easy to solve as they are either already part of macOS, or can be installed using `homebrew`. As for `applesign` and `insert_dylib` though, those can be quickly installed as follows:
 
 #### applesign
-Install with: `npm install -g node-applesign`. If you dont have `npm`, then `brew install npm` can sort you out quickly.
+Install with: `npm install -g applesign`. If you dont have `npm`, then `brew install npm` can sort you out quickly.
 
 #### insert_dylib
 Install with:
