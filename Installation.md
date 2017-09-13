@@ -37,7 +37,7 @@ virtualenv --python=python3 ~/virtual-python3
 
 3. Activate your new python virtual environment with:
 ```
-source ~/virtual-python3
+source ~/virtual-python3/bin/activate
 ```
 
 4. Next, start the installation using `pip3` with:
