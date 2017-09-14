@@ -1,4 +1,4 @@
-Sometimes it is necessary to run commands and hook functions just before the execution of the application in question is resumed. Examples of this might be when testing jailbreak detections, or when an API call that has its SSL certificate pinned is made on startup.
+Sometimes it is necessary to run commands and hook functions as the execution of the application in question is resumed (or as early as possible). Examples of this might be when testing jailbreak detection, or when an API call that has its SSL certificate pinned is made on startup.
 
 ## understanding early instrumentation
 Under normal circumstances, when `objection` starts up, it will search for and connect to the FridaGadget that is available either via USB or the network (depending on the flags used to start up). Once connected, small hooks are run to determine the available runtimes and environment information. These values are used by features such as the file manager to know how to work with the remote filesystem and to populate information within the `objection` REPL's prompt.
