@@ -9,7 +9,7 @@ A command is entered into the `objection` REPL, dispatching a python method whic
 Lets take a quick look at the project structure.
 
 ### external libraries
-Command line argument parsing is handled with [click](http://click.pocoo.org/5/), the REPL is handled by [python-prompt-toolkit](https://github.com/jonathanslenders/python-prompt-toolkit) and hook compilation (basically adding the global error handler per runtime) is handled with [jinja](http://jinja.pocoo.org/docs/2.9/).
+Command line argument parsing is handled with [click](http://click.pocoo.org/5/), the REPL is handled by [python-prompt-toolkit](https://github.com/jonathanslenders/python-prompt-toolkit) and hook compilation (basically adding the global error handler per runtime) is handled with [jinja](http://jinja.pocoo.org/docs/2.9/). If you add the `-d` flag to the `explore` command to debug hooks, hooks themselves  are formatted using [jsbeautifier](https://pypi.python.org/pypi/jsbeautifier) and dumped to screen (and application log) before being handed off to Frida.
 
 ### code locations
 * Python methods to invoke when matched to a command live in [objection/commands](https://github.com/sensepost/objection/tree/master/objection/commands).
