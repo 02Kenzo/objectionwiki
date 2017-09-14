@@ -1,8 +1,8 @@
 There are two types of command categories within `objection`. Simply put, a command is either run as a one time command, or, as a long running 'job'.
 
-A one time command gets loaded, executed and unloaded as soon as it is finished. This is often followed by some output presented in the terminal. Executing the one time command again will result in this process repeating. Examples of one time commands include `ls`, `env` and the file `upload` and `download` commands
+A one time command gets a Frida script loaded, executed and unloaded as soon as it is finished. This is often followed by some output presented in the terminal. Executing the one time command again will result in this process repeating. Examples of one time commands include `ls`, `env` and the `file upload` and `file download` commands
 
-A 'job' however gets loaded, executed and is then left running in the background. If the job has output that needs to be displayed, it will be shown in the REPL prefixed with a short job-id and name such as `[2dff56c320d5] [jailbreak-simulate]` followed by the message itself. You can continue using the REPL as these jobs are running in the background. Multiple jobs could be running at once too. Example commands that are run as jobs include `ios jailbreak simulate`, `ios pasteboard monitor` and `ios hooking dump method_args`.
+A 'job' however gets a Frida script loaded, executed and is then left running in the background. If the job has output that needs to be displayed, it will be shown in the REPL prefixed with a short job-id and name such as `[2dff56c320d5] [jailbreak-simulate]` followed by the message itself. You can continue using the REPL as these jobs are running in the background. Multiple jobs could be running at once too. Example commands that are run as jobs include `ios jailbreak simulate`, `ios pasteboard monitor` and `ios hooking dump method_args`.
 
 ## starting jobs
 Nothing special is needed to start a new job. Commands that are supposed to run as jobs will automatically start as needed.
