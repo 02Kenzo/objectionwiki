@@ -8,7 +8,7 @@ When this startup process is followed, the application is also automatically res
 ## startup commands and scripts
 To combat this, the `explore` subcommand (that starts the REPL) provides two optional flags that can be used to execute an `objection` command or your own Frida scripts before any of the environment related information gathering hooks are run. This makes it possible to hook methods such as those that check SSL pinning information or jailbreak information as the execution of the application in question is resumed.
 
-**Note:** When running within the REPL, hooks that are run attempt to take care to catch any errors that have occurred and report them. When running your own Frida scripts, these protections are not automatically added. Take special care when developing hooks that you catch errors and report in them to make debugging easier!
+**Note:** When running within the REPL, hooks that are run attempt to take care to catch any errors that have occurred and report them. When running your own Frida scripts, these protections are not automatically added. Take special care when developing hooks that you catch errors and report on them to make debugging easier!
 
 ## examples
 Lets look at a sample iOS application that performs jailbreak detection as soon as the application has started up. I want to test the behaviour of the application when it thinks it is running on a jailbroken device, so I need to run the `ios jailbreak simulate` command. As previously mentioned, normal startup of the `exploration` REPL does not give one enough time to apply the hooks for this, so we will use the early instrumentation.
