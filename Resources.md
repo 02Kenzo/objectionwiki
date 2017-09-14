@@ -1,5 +1,3 @@
-This article is a collection of resources that is considered recommended reading for the curious!
-
 # ios
 * [iOS Security Guide](https://www.apple.com/business/docs/iOS_Security_Guide.pdf). A **very** good, official Apple resource providing an overview of iOS security as a whole. The "App Security" section helps describe the restrictions imposed on third party applications.
 
