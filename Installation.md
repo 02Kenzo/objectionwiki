@@ -50,7 +50,7 @@ pip3 install -U objection
 ## errors
 The most common error you are likely to face is one that might look as follows:
 
-``
+```
 ~ # pip3 install objection
 Collecting objection
   Could not find a version that satisfies the requirement objection (from versions: )
