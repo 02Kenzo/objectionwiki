@@ -189,4 +189,95 @@ credentials  {"username":"help","password":"snek"}
 ```
 
 ## getting started (android edition)
-Coming soon™
+With `objection` [installed](installation), a [patched APK](Patching-Android-Applications) installed to your Android device and with the device connected and authorized to your computer via USB, the `objection` REPL may be started with the `objection explore` command:
+
+```txt
+$ objection explore
+
+     _     _         _   _
+ ___| |_  |_|___ ___| |_|_|___ ___
+| . | . | | | -_|  _|  _| | . |   |
+|___|___|_| |___|___|_| |_|___|_|_|
+        |___|(object)inject(ion)
+
+     Runtime Mobile Exploration
+        by: @leonjza from @sensepost
+
+[tab] for command suggestions
+com.opera.mini.native on (samsung: 6.0.1) [usb] #
+``` 
+
+When a patched Android application is started for the first time it will be in a paused state until you start the `objection` REPL, which will resume execution of the target application. If you need to do early instrumentation, the `explore` subcommand has the `--startup-command` and `--startup-script` arguments to help with that. Refer to the [early instrumentation](early-instrumentation) article for more information.
+
+At this stage, you may now enter commands into the REPL as needed. For example, issuing the `ls` command will display a directory listing of the current directory. By default, starting the `objection` REPL will start in your applications main bundle path:
+
+```
+com.opera.mini.native on (samsung: 6.0.1) [usb] # ls
+Type       Last Modified            Read    Write    Hidden    Size     Name
+---------  -----------------------  ------  -------  --------  -------  ------------
+Directory  2017-09-05 14:03:20 GMT  True    False    False     4.0 KiB  lib
+Directory  2017-09-15 09:48:59 GMT  True    True     False     4.0 KiB  cache
+Directory  2017-09-11 12:12:08 GMT  True    True     False     4.0 KiB  code_cache
+Directory  2017-09-05 14:03:41 GMT  True    True     False     4.0 KiB  no_backup
+Directory  2017-09-05 14:03:45 GMT  True    True     False     4.0 KiB  app_libs
+Directory  2017-09-15 09:49:22 GMT  True    True     False     4.0 KiB  files
+Directory  2017-09-15 09:49:22 GMT  True    True     False     4.0 KiB  shared_prefs
+Directory  2017-09-05 14:04:07 GMT  True    True     False     4.0 KiB  app_webview
+Directory  2017-09-05 14:03:41 GMT  True    True     False     4.0 KiB  app_textures
+Directory  2017-09-15 09:49:14 GMT  True    True     False     4.0 KiB  app_opera
+Directory  2017-09-05 14:09:04 GMT  True    True     False     4.0 KiB  databases
+
+Readable: Yes  Writable: Yes
+```
+
+Other interesting directories that relate to the application in question may be enumerated using the `env` command. This will print out the locations of the applications Files, Caches and other directories:
+
+```
+com.opera.mini.native on (samsung: 6.0.1) [usb] # env
+
+Name                    Path
+----------------------  ------------------------------------------------------------
+filesDirectory          /data/user/0/com.opera.mini.native/files
+cacheDirectory          /data/user/0/com.opera.mini.native/cache
+externalCacheDirectory  /storage/emulated/0/Android/data/com.opera.mini.native/cache
+codeCacheDirectory      /data/user/0/com.opera.mini.native/code_cache
+obbDir                  /storage/emulated/0/Android/obb/com.opera.mini.native
+packageCodePath         /data/app/com.opera.mini.native-1/base.apk
+```
+
+It is now possible to see that the _cacheDirectory_ directory lives at _/data/user/0/com.opera.mini.native/caches_, so we `cd` to that and inspect its contents:
+
+```
+com.opera.mini.native on (samsung: 6.0.1) [usb] # cd /data/user/0/com.opera.mini.native/cache
+/data/user/0/com.opera.mini.native/cache
+
+com.opera.mini.native on (samsung: 6.0.1) [usb] # ls
+Type       Last Modified            Read    Write    Hidden    Size      Name
+---------  -----------------------  ------  -------  --------  --------  ----------------------------
+Directory  2017-09-05 14:03:41 GMT  True    True     False     4.0 KiB   crash_dumps
+Directory  2017-09-05 14:03:42 GMT  True    True     False     4.0 KiB   webviewAppCache
+Directory  2017-09-05 14:03:42 GMT  True    True     False     4.0 KiB   webviewDatabases
+Directory  2017-09-15 09:48:55 GMT  True    True     False     4.0 KiB   turboproxy
+File       2017-09-05 14:03:51 GMT  True    True     False     64.0 B    fhash.dat
+Directory  2017-09-05 14:03:53 GMT  True    True     False     4.0 KiB   uil-images
+Directory  2017-09-11 08:18:07 GMT  True    True     False     4.0 KiB   obml
+Directory  2017-09-05 14:03:59 GMT  True    True     False     4.0 KiB   mini_images
+File       2017-09-05 14:04:05 GMT  True    True     False     59.3 KiB  1493867303508.tmp
+Directory  2017-09-11 12:12:08 GMT  True    True     False     4.0 KiB   volley
+Directory  2017-09-15 09:49:04 GMT  True    True     False     4.0 KiB   org.chromium.android_webview
+File       2017-09-05 14:04:18 GMT  True    True     False     521.0 B   -721711023.png
+File       2017-09-08 09:06:10 GMT  True    True     False     952.0 B   raw1084510070dex
+File       2017-09-11 10:32:30 GMT  True    True     False     952.0 B   raw-632611483dex
+File       2017-09-08 09:06:10 GMT  True    True     False     12.4 KiB  raw1084510070dex.dex
+File       2017-09-15 09:48:59 GMT  True    True     False     59.3 KiB  1496809943795.tmp
+File       2017-09-11 10:32:31 GMT  True    True     False     12.4 KiB  raw-632611483dex.dex
+
+Readable: Yes  Writable: Yes
+```
+
+We can aso download files off of the remote filesystem using the `file download` command:
+
+```
+com.opera.mini.native on (samsung: 6.0.1) [usb] # file download fhash.dat fhash.dat
+Downloading /data/user/0/com.opera.mini.native/cache/fhash.dat to fhash.dat
+```
