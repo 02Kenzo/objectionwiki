@@ -73,22 +73,22 @@ When a patched iOS application is started for the first time it will be in a pau
 At this stage, you may now enter commands into the REPL as needed. For example, issuing the `ls` command will display a directory listing of the current directory. By default, starting the `objection` REPL will start in your applications main bundle path:
 
 ```
-sensepost’s iPad on (iPad: 10.2.1) [usb] # ls
-Read Access
-No Write Access
-Type                   Perms  Read    Write    Owner           Group             Size  Creation                   Name
--------------------  -------  ------  -------  --------------  --------------  ------  -------------------------  ------------------------
-NSFileTypeRegular        420  True    False    _installd (33)  _installd (33)    8063  2017-07-09 07:58:32 +0000  AppIcon40x40@2x.png
-NSFileTypeRegular        420  True    False    _installd (33)  _installd (33)  191955  2017-07-09 07:58:33 +0000  Assets.car
-NSFileTypeDirectory      493  True    False    _installd (33)  _installd (33)     102  1970-01-01 00:00:00 +0000  Base.lproj
-NSFileTypeDirectory      493  True    False    _installd (33)  _installd (33)     102  1970-01-01 00:00:00 +0000  Frameworks
-NSFileTypeRegular        420  True    False    _installd (33)  _installd (33)    1386  2017-07-09 07:58:35 +0000  Info.plist
-NSFileTypeDirectory      493  True    False    _installd (33)  _installd (33)      68  1970-01-01 00:00:00 +0000  META-INF
-NSFileTypeRegular        493  True    False    _installd (33)  _installd (33)  936656  2017-07-09 07:58:35 +0000  PewPew
-NSFileTypeRegular        420  True    False    _installd (33)  _installd (33)       8  2017-07-09 07:58:35 +0000  PkgInfo
-NSFileTypeDirectory      493  True    False    _installd (33)  _installd (33)     102  1970-01-01 00:00:00 +0000  _CodeSignature
-NSFileTypeRegular        420  True    False    _installd (33)  _installd (33)    9498  2017-07-09 07:58:35 +0000  embedded.mobileprovision
-NSFileTypeRegular        420  True    False    _installd (33)  _installd (33)    1673  2017-07-09 07:58:31 +0000  swapi.co.der
+com.sensepost.ipewpew on (iPad: 10.2.1) [usb] # ls
+NSFileType      Perms  NSFileProtection    Read    Write    Owner           Group           Size       Creation                   Name
+------------  -------  ------------------  ------  -------  --------------  --------------  ---------  -------------------------  ------------------------
+Regular           420  None                True    False    _installd (33)  _installd (33)  7.9 KiB    2017-08-25 05:33:48 +0000  AppIcon40x40@2x.png
+Regular           420  None                True    False    _installd (33)  _installd (33)  187.5 KiB  2017-08-25 05:33:49 +0000  Assets.car
+Directory         493  None                True    False    _installd (33)  _installd (33)  102.0 B    1970-01-01 00:00:00 +0000  Base.lproj
+Directory         493  None                True    False    _installd (33)  _installd (33)  102.0 B    1970-01-01 00:00:00 +0000  Frameworks
+Regular           420  None                True    False    _installd (33)  _installd (33)  1.3 KiB    2017-08-25 05:33:49 +0000  Info.plist
+Directory         493  None                True    False    _installd (33)  _installd (33)  68.0 B     1970-01-01 00:00:00 +0000  META-INF
+Regular           493  None                True    False    _installd (33)  _installd (33)  915.0 KiB  2017-09-14 06:18:04 +0000  PewPew
+Regular           420  None                True    False    _installd (33)  _installd (33)  8.0 B      2017-08-25 05:33:49 +0000  PkgInfo
+Directory         493  None                True    False    _installd (33)  _installd (33)  102.0 B    1970-01-01 00:00:00 +0000  _CodeSignature
+Regular           420  None                True    False    _installd (33)  _installd (33)  9.3 KiB    2017-09-14 06:18:03 +0000  embedded.mobileprovision
+Regular           420  None                True    False    _installd (33)  _installd (33)  1.6 KiB    2017-08-16 17:05:01 +0000  swapi.co.der
+
+Readable: Yes  Writable: Yes
 ```
 
 The files in the main bundle are all available by just extracting the IPA you already have, so that in itself might not be as interesting. However, other interesting directories that relate to the application in question may be enumerated using the `env` command. This will print out the locations of the applications Library, Caches and Documents directories:
