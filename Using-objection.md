@@ -94,51 +94,52 @@ Readable: Yes  Writable: Yes
 The files in the main bundle are all available by just extracting the IPA you already have, so that in itself might not be as interesting. However, other interesting directories that relate to the application in question may be enumerated using the `env` command. This will print out the locations of the applications Library, Caches and Documents directories:
 
 ```
-sensepost’s iPad on (iPad: 10.2.1) [usb] # env
-Name              System    Model    Version
-----------------  --------  -------  ---------
-sensepost’s iPad  iOS       iPad     10.2.1
+com.sensepost.ipewpew on (iPad: 10.2.1) [usb] # env
 
 Name                           Path
 -----------------------------  ------------------------------------------------------------------------------------------------------------
-DocumentDirectory              /var/mobile/Containers/Data/Application/E2933EE7-4805-4411-A764-B1CDBFA5127C/Documents
-LibraryDirectory               /var/mobile/Containers/Data/Application/E2933EE7-4805-4411-A764-B1CDBFA5127C/Library
-CachesDirectory                /var/mobile/Containers/Data/Application/E2933EE7-4805-4411-A764-B1CDBFA5127C/Library/Caches
-BundlePath                     /var/containers/Bundle/Application/9FCE7485-EE1B-462E-8FC5-A49974D73F4F/PewPew.app
-ApplicationDirectory           /var/mobile/Containers/Data/Application/E2933EE7-4805-4411-A764-B1CDBFA5127C/Applications
-DemoApplicationDirectory       /var/mobile/Containers/Data/Application/E2933EE7-4805-4411-A764-B1CDBFA5127C/Applications/Demos
-DeveloperApplicationDirectory  /var/mobile/Containers/Data/Application/E2933EE7-4805-4411-A764-B1CDBFA5127C/Developer/Applications
+DocumentDirectory              /var/mobile/Containers/Data/Application/6CDB1F03-8747-42DE-8376-C4008A2E0731/Documents
+LibraryDirectory               /var/mobile/Containers/Data/Application/6CDB1F03-8747-42DE-8376-C4008A2E0731/Library
+CachesDirectory                /var/mobile/Containers/Data/Application/6CDB1F03-8747-42DE-8376-C4008A2E0731/Library/Caches
+BundlePath                     /var/containers/Bundle/Application/4CF3BFEE-5964-4A01-B698-18AC2500EEA1/PewPew.app
+ApplicationDirectory           /var/mobile/Containers/Data/Application/6CDB1F03-8747-42DE-8376-C4008A2E0731/Applications
+DemoApplicationDirectory       /var/mobile/Containers/Data/Application/6CDB1F03-8747-42DE-8376-C4008A2E0731/Applications/Demos
+DeveloperApplicationDirectory  /var/mobile/Containers/Data/Application/6CDB1F03-8747-42DE-8376-C4008A2E0731/Developer/Applications
 UserDirectory
 CoreServiceDirectory
-AutosavedInformationDirectory  /var/mobile/Containers/Data/Application/E2933EE7-4805-4411-A764-B1CDBFA5127C/Library/Autosave Information
-DesktopDirectory               /var/mobile/Containers/Data/Application/E2933EE7-4805-4411-A764-B1CDBFA5127C/Desktop
-ApplicationSupportDirectory    /var/mobile/Containers/Data/Application/E2933EE7-4805-4411-A764-B1CDBFA5127C/Library/Application Support
-ReceiptPath                    /private/var/mobile/Containers/Data/Application/E2933EE7-4805-4411-A764-B1CDBFA5127C/StoreKit/sandboxReceipt
-ResourcePath                   /var/containers/Bundle/Application/9FCE7485-EE1B-462E-8FC5-A49974D73F4F/PewPew.app
+AutosavedInformationDirectory  /var/mobile/Containers/Data/Application/6CDB1F03-8747-42DE-8376-C4008A2E0731/Library/Autosave Information
+DesktopDirectory               /var/mobile/Containers/Data/Application/6CDB1F03-8747-42DE-8376-C4008A2E0731/Desktop
+ApplicationSupportDirectory    /var/mobile/Containers/Data/Application/6CDB1F03-8747-42DE-8376-C4008A2E0731/Library/Application Support
+ReceiptPath                    /private/var/mobile/Containers/Data/Application/6CDB1F03-8747-42DE-8376-C4008A2E0731/StoreKit/sandboxReceipt
+ResourcePath                   /var/containers/Bundle/Application/4CF3BFEE-5964-4A01-B698-18AC2500EEA1/PewPew.app
 ```
 
-It is now possible to see that the _Documents_ directory lives at _/var/mobile/Containers/Data/Application/E2933EE7-4805-4411-A764-B1CDBFA5127C/Documents_, so we `cd` to that and inspect its contents:
+It is now possible to see that the _Documents_ directory lives at _/var/mobile/Containers/Data/Application/6CDB1F03-8747-42DE-8376-C4008A2E0731/Documents_, so we `cd` to that and inspect its contents:
 
 ```
-sensepost’s iPad on (iPad: 10.2.1) [usb] # cd /var/mobile/Containers/Data/Application/E2933EE7-4805-4411-A764-B1CDBFA5127C/Documents
-/var/mobile/Containers/Data/Application/E2933EE7-4805-4411-A764-B1CDBFA5127C/Documents
+com.sensepost.ipewpew on (iPad: 10.2.1) [usb] # cd /var/mobile/Containers/Data/Application/6CDB1F03-8747-42DE-8376-C4008A2E0731/Documents
+/var/mobile/Containers/Data/Application/6CDB1F03-8747-42DE-8376-C4008A2E0731/Documents
 
-sensepost’s iPad on (iPad: 10.2.1) [usb] # ls
-Read Access
-Write Access
-Type                 Perms  Read    Write    Owner         Group           Size  Creation                   Name
------------------  -------  ------  -------  ------------  ------------  ------  -------------------------  -----------------
-NSFileTypeRegular      420  True    True     mobile (501)  mobile (501)     276  2017-07-09 08:01:08 +0000  credentials.plist
-NSFileTypeRegular      420  True    True     mobile (501)  mobile (501)   12288  2017-07-05 19:48:01 +0000  pewpew.sqlite
+com.sensepost.ipewpew on (iPad: 10.2.1) [usb] # ls
+NSFileType      Perms  NSFileProtection                      Read    Write    Owner         Group         Size      Creation                   Name
+------------  -------  ------------------------------------  ------  -------  ------------  ------------  --------  -------------------------  -----------------
+Regular           420  CompleteUntilFirstUserAuthentication  True    True     mobile (501)  mobile (501)  4.0 B     2017-09-04 13:47:08 +0000  api.db
+Regular           420  None                                  True    True     mobile (501)  mobile (501)  4.0 B     2017-09-04 13:48:49 +0000  bar.png
+Regular           420  CompleteUnlessOpen                    True    True     mobile (501)  mobile (501)  4.0 B     2017-09-04 13:44:27 +0000  blueprint.txt
+Regular           420  CompleteUntilFirstUserAuthentication  True    True     mobile (501)  mobile (501)  275.0 B   2017-09-15 09:43:25 +0000  credentials.plist
+Regular           420  CompleteUntilFirstUserAuthentication  True    True     mobile (501)  mobile (501)  12.0 KiB  2017-08-10 09:50:08 +0000  pewpew.sqlite
+Regular           420  Complete                              True    True     mobile (501)  mobile (501)  4.0 B     2017-09-04 13:42:57 +0000  secret.txt
+
+Readable: Yes  Writable: Yes
 ```
 
 Interesting, a plist file named 'credentials' and a sqlite database. Let take a look at whats inside the plist. It is possible to download the raw `.plist` file from the mobile devices filesystem to your local filesystem and inspect it that way (In the example below, commands prefixed with a `!` are run as OS commands):
 
 ```
-sensepost’s iPad on (iPad: 10.2.1) [usb] # download credentials.plist creds.plist
-Downloading /var/mobile/Containers/Data/Application/E2933EE7-4805-4411-A764-B1CDBFA5127C/Documents/credentials.plist to creds.plist
+com.sensepost.ipewpew on (iPad: 10.2.1) [usb] # file download credentials.plist creds.plist
+Downloading /var/mobile/Containers/Data/Application/6CDB1F03-8747-42DE-8376-C4008A2E0731/Documents/credentials.plist to creds.plist
 
-sensepost’s iPad on (iPad: 10.2.1) [usb] # !cat creds.plist
+com.sensepost.ipewpew on (iPad: 10.2.1) [usb] # !cat creds.plist
 Running OS command: cat creds.plist
 
 <?xml version="1.0" encoding="UTF-8"?>
@@ -148,32 +149,31 @@ Running OS command: cat creds.plist
 	<key>password</key>
 	<string>snek</string>
 	<key>username</key>
-	<string>help</string>
+	<string>bob</string>
 </dict>
 </plist>
-
 ```
 
 Or, you can use the inline helper tool that will parse the plist and dump its contents. This is useful as it is not always possible to easily read the raw file:
 
 ```
-sensepost’s iPad on (iPad: 10.2.1) [usb] # ios plist cat credentials.plist
+com.sensepost.ipewpew on (iPad: 10.2.1) [usb] # ios plist cat credentials.plist
 {
     password = snek;
-    username = help;
+    username = bob;
 }
 ```
 
 We can query the sqlite database as well to get an idea of its table structure and contents. Lets connect and have a look at the table structure first:
 
 ```
-sensepost’s iPad on (iPad: 10.2.1) [usb] # sqlite connect pewpew.sqlite
+com.sensepost.ipewpew on (iPad: 10.2.1) [usb] # sqlite connect pewpew.sqlite
 Caching local copy of database file...
-Downloading /var/mobile/Containers/Data/Application/E2933EE7-4805-4411-A764-B1CDBFA5127C/Documents/pewpew.sqlite to /var/folders/nn/7rzmzs_920n8qvff8n9nf1rm0000gn/T/tmpo88npganobjection.sqlite
+Downloading /var/mobile/Containers/Data/Application/6CDB1F03-8747-42DE-8376-C4008A2E0731/Documents/pewpew.sqlite to /var/folders/nn/7rzmzs_920n8qvff8n9nf1rm0000gn/T/tmpxv1u2gt5objection.sqlite
 Validating SQLite database format
 Connected to SQLite database at: pewpew.sqlite
 
-sensepost’s iPad on (iPad: 10.2.1) [usb] # sqlite execute schema
+com.sensepost.ipewpew on (iPad: 10.2.1) [usb] # sqlite execute schema
 ------------------------------------------------------------------
 CREATE TABLE data ( key text NOT NULL UNIQUE, value text NOT NULL)
 ------------------------------------------------------------------
@@ -182,7 +182,7 @@ CREATE TABLE data ( key text NOT NULL UNIQUE, value text NOT NULL)
 As you can see, the database contains a single table called _data_, with two columns. Lets execute a query to have a look at the data itself:
 
 ```
-sensepost’s iPad on (iPad: 10.2.1) [usb] # sqlite execute query select * from data;
+com.sensepost.ipewpew on (iPad: 10.2.1) [usb] # sqlite execute query select * from data;
 -----------  -------------------------------------
 credentials  {"username":"help","password":"snek"}
 -----------  -------------------------------------
