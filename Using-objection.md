@@ -12,7 +12,7 @@ This article will walk through some sample usage of `objection`. A few assumptio
 ## command format
 The `objection` command contains a number of subcommands. Certain subcommands may contain flags to set various configurations and options. To get a list of available options, run any `objection` command with the `--help` flag. For example:
 
-```bash
+```txt
 $ objection --help
 Usage: objection [OPTIONS] COMMAND [ARGS]...
 
