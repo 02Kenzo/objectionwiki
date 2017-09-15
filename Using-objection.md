@@ -281,3 +281,26 @@ We can aso download files off of the remote filesystem using the `file download`
 com.opera.mini.native on (samsung: 6.0.1) [usb] # file download fhash.dat fhash.dat
 Downloading /data/user/0/com.opera.mini.native/cache/fhash.dat to fhash.dat
 ```
+
+It is possible to list all of the Activities that the application has:
+
+```txt
+com.opera.mini.native on (samsung: 6.0.1) [usb] # android hooking list activities
+com.facebook.ads.AudienceNetworkActivity
+com.google.android.gms.ads.AdActivity
+com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+com.google.android.gms.common.api.GoogleApiActivity
+com.opera.android.AssistActivity
+com.opera.android.MiniActivity
+com.opera.android.ads.AdmobIntentInterceptor
+com.opera.mini.android.Browser
+
+Found 8 classes
+```
+
+Using the output from the activities list, invoking arbitrary activities is as simple as:
+
+```txt
+com.opera.mini.native on (samsung: 6.0.1) [usb] # android intent launch_activity com.facebook.ads.AudienceNetworkActivity
+Launching Activity: com.facebook.ads.AudienceNetworkActivity...
+```
