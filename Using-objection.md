@@ -40,8 +40,9 @@ Options:
 Commands:
   device_type  Get information about an attached device.
   explore      Start the objection exploration REPL.
+  patchapk     Patch an APK with the frida-gadget.so.
   patchipa     Patch an IPA with the FridaGadget dylib.
-  version      Prints the current version and exists
+  version      Prints the current version and exists.
 ```
 
 The most commonly used subcommand is `explore`, which will start the `objection` exploration REPL. Considering the options in the above `--help` output, to connect to a Frida gadget hosted on the network, one would execute `objection -N explore`.
