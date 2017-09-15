@@ -65,7 +65,7 @@ $ objection explore
         by: @leonjza from @sensepost
 
 [tab] for command suggestions
-sensepost’s iPad on (iPad: 10.2.1) [usb] #
+com.sensepost.ipewpew on (iPad: 10.2.1) [usb] #
 ``` 
 
 When a patched iOS application is started for the first time it will be in a paused state until you start the `objection` REPL, which will resume execution of the target application. If you need to do early instrumentation, the `explore` subcommand has the `--startup-command` and `--startup-script` arguments to help with that. Refer to the [early instrumentation](early-instrumentation) article for more information.
