@@ -52,7 +52,7 @@ The exploration REPL will autocomplete commands when the `[TAB]` key is pressed 
 ## getting started (ios edition)
 With `objection` [installed](installation), a [patched IPA](Patching-iOS-Applications) installed to your iOS device and with the device connected authorized to your computer via USB, the `objection` REPL may be started with the `objection explore` command:
 
-```bash
+```txt
 $ objection explore
 
      _     _         _   _
