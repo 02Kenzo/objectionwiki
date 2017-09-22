@@ -23,7 +23,7 @@ Great. That is all the information you need. Each of those "name"'s are what we 
  ___| |_  |_|___ ___| |_|_|___ ___
 | . | . | | | -_|  _|  _| | . |   |
 |___|___|_| |___|___|_| |_|___|_|_|
-        |___|(object)inject(ion) v1.1.6
+        |___|(object)inject(ion)
 
      Runtime Mobile Exploration
         by: @leonjza from @sensepost
