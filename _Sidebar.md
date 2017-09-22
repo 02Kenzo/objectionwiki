@@ -30,3 +30,6 @@
 
 #### without root
 - [Patching Android Applications](Patching-Android-Applications)
+
+#### with root
+- [Running On A Rooted Device](Running-On-A-Rooted-Device)
