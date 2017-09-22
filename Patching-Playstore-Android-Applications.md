@@ -1,0 +1,1 @@
+This article describes how to patch applications downloaded from the Google Play Store.
