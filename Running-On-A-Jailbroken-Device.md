@@ -14,7 +14,7 @@ With everything installed, run `frida-ps -U` to list all of the processes on the
 3167  AGXCompilerServi
 ```
 
-Great. That is all the information you need. Each of those "name"'s are what we refer to as Gadgets in objection. So, to "connect" to one of those apps, specify the name to the `--gadget` flag.
+Great. That is all the information you need. Each of those "name"'s are what we refer to as Gadgets in objection. So, to "connect" to one of those apps, specify the name with the `--gadget` flag.
 
 ```txt
 ~ » objection --gadget "App Store" explore
