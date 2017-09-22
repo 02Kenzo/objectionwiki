@@ -13,9 +13,16 @@
 - [Hacking](Hacking)
 
 ## iOS
+
+### without a jailbreak
 - [Patching iOS Applications](Patching-iOS-Applications)
 - [Running Patched iOS Applications](Running-Patched-iOS-Applications)
 - [Patching iOS Application Sources](Patching-iOS-Application-Sources)
+
+### with a jailbreak
+- [Running On A Jailbroken Device](Running-On-A-Jailbroken-Device)
+
+### other
 - [Understanding the TouchID "Bypass"](Understanding-the-TouchID-Bypass)
 - [Notes About The Keychain Dumper](Notes-About-The-Keychain-Dumper)
 
