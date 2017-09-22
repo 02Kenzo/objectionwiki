@@ -2,6 +2,7 @@ Before you can use any of the `objection` commands on an Android application, th
 
 ## toc
 * [patching - dependencies](#patching---dependencies)
+* [(optional) - obtaining play store apks](#optional---obtaining-play-store-apks)
 * [patching - patching-an-apk](#patching---patching-an-apk)
 * [next steps](#next-steps)
 
@@ -14,6 +15,36 @@ The `objection patchapk` is a command that basically wraps around several other 
 * `apktool` - from: https://ibotpeaches.github.io/Apktool/
 
 Most of these dependencies are really easy to solve and can be installed using `homebrew` on macOS, or `apt` in Kali Linux. 
+
+## (optional) - obtaining play store apks
+It is possible to get the APK of an app you downloaded from the Google Play store without root on your Android device. To do this, first download the application to your phone and connect it to your computer. Make sure your computer sees the device using `adb devices`. Then:
+
+- Locate the package name for the application you downloaded:
+
+```txt
+$ adb shell pm list packages | grep uber
+package:com.ubercab
+```
+
+- With the package name known, determine its installed path on the device:
+
+```txt
+$ adb shell pm path com.ubercab         
+package:/data/app/com.ubercab-1/base.apk
+```
+
+- Finally, download the APK form the device:
+
+```txt
+$ adb pull /data/app/com.ubercab-1/base.apk com.ubercab.apk
+[100%] /data/app/com.ubercab-1/base.apk
+
+
+$ ls com.ubercab.apk 
+com.ubercab.apk
+```
+
+This process should leave you with the downloaded APK on your local computer, ready to use in the patching process described in the next section.
 
 ## patching - patching an APK
 With **all** of the above dependencies solved, we can finally patch an actual APK. The patching process itself is as simple as:
