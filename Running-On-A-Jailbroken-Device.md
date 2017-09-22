@@ -1,4 +1,4 @@
-If you have a jailbroken device, you can start `frida-server` after [installing it](https://www.frida.re/docs/ios/#with-jailbreak) on your device as well as the [client tools](https://www.frida.re/docs/installation/) on your laptop.
+If you have a jailbroken device, you can start `frida-server` after [installing it](https://www.frida.re/docs/ios/#with-jailbreak) on your device as well as the [client tools](https://www.frida.re/docs/installation/) on your laptop. There is no need to patch applications to embed the Frida gadget as Frida can simply inject into a target process.
 
 With everything installed, run `frida-ps -U` to list all of the processes on the device.
 
