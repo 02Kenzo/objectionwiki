@@ -14,12 +14,12 @@
 
 ## iOS
 
-### without a jailbreak
+#### without a jailbreak
 - [Patching iOS Applications](Patching-iOS-Applications)
 - [Running Patched iOS Applications](Running-Patched-iOS-Applications)
 - [Patching iOS Application Sources](Patching-iOS-Application-Sources)
 
-### with a jailbreak
+#### with a jailbreak
 - [Running On A Jailbroken Device](Running-On-A-Jailbroken-Device)
 
 ### other
@@ -28,5 +28,5 @@
 
 ## Android
 
-### without root
+#### without root
 - [Patching Android Applications](Patching-Android-Applications)
