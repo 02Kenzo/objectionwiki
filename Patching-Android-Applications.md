@@ -76,7 +76,7 @@ Cleaning up temp files...
 
 ```
 
-Note: If you do not have an Android device connected then you will need to specify the target architecture using the `--architecture` flag.
+**Note:** If you do not have an Android device connected then you will need to specify the target architecture using the `--architecture` flag.
 
 ## next steps
 Once you have a patched APK ready, its time to install it. See the #TODO article for more information.
