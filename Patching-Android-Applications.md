@@ -33,7 +33,7 @@ $ adb shell pm path com.ubercab
 package:/data/app/com.ubercab-1/base.apk
 ```
 
-- Finally, download the APK form the device:
+- Finally, download the APK from the device:
 
 ```txt
 $ adb pull /data/app/com.ubercab-1/base.apk com.ubercab.apk
