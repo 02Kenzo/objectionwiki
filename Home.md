@@ -1,6 +1,6 @@
 ## Welcome to the objection wiki!
 
-![objection](https://i.imgur.com/SwmFT5O.png)
+![objection](https://i.imgur.com/4M0yePP.png)
 
 This wiki contains more information about how to install, use and understand `objection`. 
 
