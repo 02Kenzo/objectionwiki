@@ -14,7 +14,7 @@ The `objection patchapk` is a command that basically wraps around several other 
 * `jarsigner` - from: http://docs.oracle.com/javase/7/docs/technotes/tools/windows/jarsigner.html
 * `apktool` - from: https://ibotpeaches.github.io/Apktool/
 
-Most of these dependencies are really easy to solve and can be installed using `homebrew` on macOS, or `apt` in Kali Linux. 
+Most of these dependencies are really easy to solve and can be installed using `homebrew` on macOS, or `apt` in Kali Linux. If you choose to manually install the dependencies, ensure that they are available in your current `PATH`.
 
 ## (optional) - obtaining play store apks
 It is possible to get the APK of an app you downloaded from the Google Play store without root on your Android device. To do this, first download the application to your phone and connect it to your computer. Make sure your computer sees the device using `adb devices`. Then:
