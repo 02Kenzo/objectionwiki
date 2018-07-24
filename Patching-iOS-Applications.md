@@ -60,6 +60,7 @@ The next part is to prepare the commands needed for the IPA patching process. `o
 * `insert_dylib` - from: https://github.com/Tyilo/insert_dylib
 * `security`, `codesign`, xcodebuild` - macOS/XCode commands
 * `zip` & `unzip` - builtin, or just installed using `homebrew`
+* `7z` - installed using homebrew with `brew install p7zip`
 
 Most of these dependencies are really easy to solve as they are either already part of macOS, or can be installed using `homebrew`. As for `applesign` and `insert_dylib` though, those can be quickly installed as follows:
 
