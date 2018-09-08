@@ -19,3 +19,6 @@ Within `objection`, when you run the `ios ui touchid_bypass` command, a hook is 
 Once the `reply` has had its success boolean set to `true`, and original, intended code block is executed, just like it would have under normal conditions. If this code block contains further validations, then those need to be inspected separately and hooked/manipulated appropriately.
 
 What should be clear now is that this 'bypass' is purely a local bypass for when a target application calls `evaluatePolicy` and a failed response is received. This 'bypass' will not work in cases where keychain items are protected with access control flags such as `kSecAccessControlTouchIDAny` or `kSecAccessControlTouchIDCurrentSet`. 
+
+## still confused?
+Issue [#136](https://github.com/sensepost/objection/issues/136#issuecomment-419664574) contains a more verbose explanation which may help clear more things up.
