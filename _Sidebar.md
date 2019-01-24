@@ -11,6 +11,7 @@
 - [Logging Information](Logging-Information)
 - [Resources](Resources)
 - [Hacking](Hacking)
+- [Agent Development Environment](Agent-Development-Environment)
 
 ## iOS
 
