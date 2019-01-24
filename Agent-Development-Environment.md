@@ -1,4 +1,4 @@
-This article aims to explain how to configure a development environment for the Frida agent used in `objection`.
+This article aims to explain how to configure a development environment for the Frida [agent](https://github.com/sensepost/objection/tree/master/agent) used in `objection`.
 
 Although `objection` is built using many languages, TypeScript is used for the Frida agent. Before the agent can be used in objection, it has to go through a compilation phase to translate the TypeScript to an ES5 compatible JavaScript agent.
 
