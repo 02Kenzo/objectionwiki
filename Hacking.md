@@ -1,19 +1,19 @@
-So you want to dig a little deeper into the project and its source code. This article aims to give you a birds eye view on the project structure, a quick flow example to run a hook and other goodies.
+So you want to dig a little deeper into the project and its source code. Maybe to test out some changes, or better yet, for a pull request! This article aims to give you a birds eye view on the project structure, and some tips on how to get a development environment up and running.
 
 ## birds eye view
-At its core, `objection` relies **heavily** on Frida to perform most of the magic. Frida, together with some purpose built hooks and the python REPL is what makes up `objection`.
+At its core, `objection` relies **heavily** on [Frida](https://www.frida.re/) to perform most of the magic. Frida, together with some purpose built hooks and the python REPL is what makes up `objection`.
 
-A command is entered into the `objection` REPL, dispatching a python method which may or may not expect arguments. Depending on the method, a runtime specific [hook](https://github.com/sensepost/objection/tree/master/objection/hooks) will get injected into the mobile devices process and executed. Feedback from the hook is sent back to the python environment using `send()` invocations and reported back to the screen. 
+A command is entered into the `objection` REPL, running a python method which may or may not expect arguments. Depending on the python method invoked, a call using the Frida [RPC](https://www.frida.re/docs/javascript-api/#rpc) to the injected [agent](https://github.com/sensepost/objection/tree/master/agent) will be made. 
 
 ## project structure
-Lets take a quick look at the project structure.
+Let's take a quick look at the project structure.
 
 ### external libraries
-Command line argument parsing is handled with [click](http://click.pocoo.org/5/), the REPL is handled by [python-prompt-toolkit](https://github.com/jonathanslenders/python-prompt-toolkit) and hook compilation (basically adding the global error handler per runtime) is handled with [jinja](http://jinja.pocoo.org/docs/2.9/). If you add the `-d` flag to the `explore` command to debug hooks, hooks themselves  are formatted using [jsbeautifier](https://pypi.python.org/pypi/jsbeautifier) and dumped to screen (and application log) before being handed off to Frida.
+Command line argument parsing is handled with [click](http://click.pocoo.org/5/), the REPL is handled by [python-prompt-toolkit](https://github.com/jonathanslenders/python-prompt-toolkit) and the agent is written in [TypeScript](https://www.typescriptlang.org/) and [compiled](https://github.com/sensepost/objection/blob/master/agent/package.json#L9) to ES5 compatible JavaScript. If you add the `-d` flag to the `explore` command, extra debugging information would be printed to the screen during normal operation.
 
 ### code locations
-* Python methods to invoke when matched to a command live in [objection/commands](https://github.com/sensepost/objection/tree/master/objection/commands).
-* Frida hooks to load and execute live in their runtime specific directories in [objection/hooks](https://github.com/sensepost/objection/tree/master/objection/hooks).
+* Python methods to invoke when matched to a command lives in [objection/commands](https://github.com/sensepost/objection/tree/master/objection/commands).
+* The Frida agent performing the instrumentation magic lives in [objection/agent](https://github.com/sensepost/objection/tree/master/agent).
 * Classes and methods responsible for the command line interface, as well as the REPL live in [objection/console](https://github.com/sensepost/objection/tree/master/objection/console).
 
 ## REPL command flow
