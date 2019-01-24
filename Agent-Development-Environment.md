@@ -4,9 +4,15 @@ Although `objection` is built using many languages, TypeScript is used for the F
 
 ## toc
 
-* [os dependencies](#command-format)
-* [typescript environment](#getting-started-ios-edition)
+* [os dependencies](#os-dependencies)
+* [agent dependencies](#agent-dependencies)
 
 ## os dependencies
-To start off with configuring a development environment for the Frida agent, ensure that you have both the `node` and `npm` commands available. Both of there should be installable using your Operating Systems package manager.
+To start off with configuring a development environment for the Frida agent, ensure that you have both the `node` and `npm` commands available. Both of there should be installable using your Operating Systems package manager. Installing the latest versions of both these commands is also recommended. For more detailed instructions on how to install these, please refer to documentation relevant to your Operating System.
 
+## agent dependencies
+With the `node` and `npm` commands available, the following steps should get you up and running, building the final `agent.js`.
+
+- `cd` to the `objection/agent` directory.
+- Run the `npm install` command to grab all of the gazillion dependencies needed. This command should drop the dependencies in a `node_modules` folder in the current directory.
+- Depending on your version of `npm`, the `npm run build` command may automatically run. If not, run `npm run build` to generate the `agent.js` from the current TypeScript source code.
