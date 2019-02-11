@@ -75,7 +75,7 @@ Install: Complete
 Once this process is complete, the application should be available on the iOS devices home screen. Special note should be taken on the line that reads `Installing 'com.sensepost.myapp'`. This is telling you what the "bundle identifier" is for the application you are installing. You will need this to run the application itself.
 
 #### running the application
-Ro tun the application, simply run the `idevicedebug` command, specifying the bundle identifier for the app as the last argument. So, if we were to run a SensePost application:
+To run the application, simply run the `idevicedebug` command, specifying the bundle identifier for the app as the last argument. So, if we were to run a SensePost application:
 
 ```
 idevicedebug -d run com.sensepost.myapp
