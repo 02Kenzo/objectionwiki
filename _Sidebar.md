@@ -36,4 +36,5 @@
 #### with root
 - [Running On A Rooted Device](Running-On-A-Rooted-Device)
 
-## [API](API)
+## API
+- [API Documentation](API)
