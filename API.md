@@ -1,11 +1,14 @@
 Since `objection` version 1.5.0, an optional API has been made available. The API operates in two main modes, whereby the first is to invoke methods directly available in the [Frida agent](https://github.com/sensepost/objection/tree/master/agent), and the second mode allows for the execution of arbitrary Frida scripts.
 
+To skip the details, jump down to the summary [here](#summary)
+
 # toc
 - [starting](#starting)
 - [rpc methods](#rpc-methods-endpoint)
   - [rpc android example](#rpc---android-example)
   - [rpc ios example](#rpc---ios-example)
 - [raw scripts endpoint](#raw-scripts-endpoint)
+- [summary](#summary)
 
 ## starting
 The `objection` API interface may be started in two ways, of which both ways are done via the command line interface. In both cases, it is possible to specify the host and port of the API with the `--api-host` and `--api-port` flags right after the `objection` command.
@@ -72,3 +75,18 @@ if (ObjC.available) {
 $ curl -X POST -H "Content-Type: text/javascript" http://127.0.0.1:8888/script/runonce -d "@script.js"
 [{"payload":"testing Frida script, via objection API","type":"send"}]
 ```
+
+## summary
+
+Endpoints:
+- `POST` to `/script/runonce`
+- `GET` & `POST` to `/rpc/invoke/<method name>`
+
+Content-Type header:
+- `POST` to `/rpc/invoke/<method name>` = `application/json`
+- `POST` to `/script/runonce` = `text/javascript`
+
+Endpoints:
+- iOS [here](https://github.com/sensepost/objection/blob/master/agent/src/rpc/ios.ts)
+- Android [here](https://github.com/sensepost/objection/blob/master/agent/src/rpc/android.ts)
+- All [here](https://github.com/sensepost/objection/blob/master/agent/src/rpc/)
