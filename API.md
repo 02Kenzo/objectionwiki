@@ -1,1 +1,1 @@
-Since `objection` version 1.5.0, an optional API has been made available. The API operates in two main modes, whereby the first is to invoke methods directly available in the Frida agent, and the second mode allows for the execution of arbitrary Frida scripts.
+Since `objection` version 1.5.0, an optional API has been made available. The API operates in two main modes, whereby the first is to invoke methods directly available in the [Frida agent](https://github.com/sensepost/objection/tree/master/agent), and the second mode allows for the execution of arbitrary Frida scripts.
