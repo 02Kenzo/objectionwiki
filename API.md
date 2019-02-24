@@ -77,6 +77,7 @@ $ curl -X POST -H "Content-Type: text/javascript" http://127.0.0.1:8888/script/r
 ```
 
 ## summary
+Outputs are json encoded by default, unless that `?json=false` query string parameter is added.
 
 Endpoints:
 - `POST` to `/script/runonce`
