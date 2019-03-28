@@ -14,7 +14,7 @@ It is possible to extend the core features of objection using plugins. In short,
 Plugins only have a few required pieces of information for objection to be able to load it. At a high level, an `__init__.py` file should exist in a folder, with two variables specified. Those variables are `namespace` and `plugin`.
 
 The `namespace` variable declares the namespace this plugin should be in. This string value is used internally to reference the plugin as well as to determine where the commands defined in an `implementation` should go.
-The `plugin` variable should be a Class instance that inherits `from objection.utils.plugin.Plugin`.
+The `plugin` variable should be a Class instance that inherits from `objection.utils.plugin.Plugin`.
 
 An example plugin may be seen in the objection test suite [here](https://github.com/sensepost/objection/blob/master/tests/data/plugin/__init__.py).
 
@@ -25,6 +25,8 @@ Two options exist to load plugins in objection. The first is by specifying a fol
 When specifying the `-P/--plugin-folder` flag, the target directory should contain subdirectories, each being a valid objection plugin.
 
 ## plugin class
+
+Every plugin should extend the `objection.utils.plugin.Plugin` class.
 
 ### plugin frida script
 
