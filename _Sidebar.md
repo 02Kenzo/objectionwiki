@@ -12,6 +12,7 @@
 - [Resources](Resources)
 - [Hacking](Hacking)
 - [Agent Development Environment](Agent-Development-Environment)
+- [Plugins](Plugins)
 
 ## iOS
 
