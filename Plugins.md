@@ -107,7 +107,12 @@ class VersionInfo(Plugin):
             :param ns:
         """
 
+        # plugin sources are specified, so when the plugin is loaded it will not
+        # try and discover an index.js next to this file.
         self.script_src = s
+
+        # as script_src is specified, a path is not necessary. this is simply an
+        # example of an alternate method to load a Frida script
         # self.script_path = os.path.join(os.path.dirname(__file__), "script.js")
 
         implementation = {
