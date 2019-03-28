@@ -38,6 +38,43 @@ While it's not a requirement to use a Frida script as part of your plugin, some 
 
 Scripts loaded in a plugin may be injected using the base `Plugin` class' `inject()` method. This is a requirement before you will be able to interact with your Frida scripts exposed `rpc.exports`. This method will most commonly be called in your extended `Plugin` class' `__init__` method. Once called, the extended `Plugin` class will have an `api` attribute, which are the snake case versions of the methods exposed using your scripts `rpc.exports`.
 
+### plugin implementation
+
+The `implementation` dictionary for a plugin contains the specification used by objection to populate the REPL command line. You may add as many 'commands' as you please. The format for this dictionary is as follows:
+
+```text
+// Dictionary root
+{
+  'meta': 'Work with Frida version information',
+  'commands': SUB_COMMANDS
+}
+```
+
+```text
+// SUB_COMMANDS
+{
+  {
+    'command_name': {
+      'meta': 'Short information about the command',
+      'exec': module.function # module method to call for this command
+  }
+}
+```
+
+A full example implementation would be:
+
+```python
+{
+  'meta': 'Work with Frida version information',
+  'commands': {
+    'info': {
+      'meta': 'Get the current Frida version',
+      'exec': self.version
+    }
+  }
+}
+```
+
 ## full example plugin
 
 The following plugin, when loaded, adds the `plugin frida info` command to the objection REPL.
