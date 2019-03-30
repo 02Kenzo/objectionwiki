@@ -25,7 +25,7 @@
 - [Running On A Jailbroken Device](Running-On-A-Jailbroken-Device)
 
 ### other
-- [Understanding the TouchID "Bypass"](Understanding-the-TouchID-Bypass)
+- [Understanding the iOS Biometrics "Bypass"](Understanding-the-iOS-Biometrics-Bypass)
 - [Notes About The Keychain Dumper](Notes-About-The-Keychain-Dumper)
 
 ## Android
