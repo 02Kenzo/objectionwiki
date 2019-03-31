@@ -23,7 +23,7 @@ A few examples of plugins are available, and may be found at the following locat
 
 - An example plugin in the objection test suite lives [here](https://github.com/sensepost/objection/blob/master/tests/data/plugin/__init__.py). This plugin bundles the Frida script sources as a global variable inside of the script, specifying the `script_src` attribute.
 - A plugin to side load Facebook's [Stetho](http://facebook.github.io/stetho/) is available [here](https://gist.github.com/leonjza/7fcc137f7f798ffca00ddf2bfef36b63). This plugin contains the Frida script sources as an `index.js` file next to the plugins `__init__.py` file, meaning the plugin loader will automatically detect the Frida script sources without specifying any attributes.
-- A clipboard monitoring plugin is available [here](https://github.com/SpeedyFireCyclone/objection-android-clipboard_ whereby the `index.js` is the result of a TypeScript project's compilation phase, also automatically loaded based in the Frida script's name. Larger plugin project's should consider using this method of building the Frida script sources.
+- A clipboard monitoring plugin is available [here](https://github.com/SpeedyFireCyclone/objection-android-clipboard) whereby the `index.js` is the result of a TypeScript project's compilation phase, also automatically loaded based in the Frida script's name. Larger plugin project's should consider using this method of building the Frida script sources.
 
 ## loading plugins
 
