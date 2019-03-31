@@ -3,6 +3,7 @@ It is possible to extend the core features of objection using plugins. In short,
 # toc
 
 - [plugin structure](#plugin-structure)
+  - [example plugins](#example-plugins)
 - [loading plugins](#loading-plugins)
 - [plugin class](#plugin-class)
   - [plugin frida script](#plugin-frida-script)
@@ -16,7 +17,13 @@ Plugins only have a few required pieces of information for objection to be able 
 The `namespace` variable declares the namespace this plugin should be in. This string value is used internally to reference the plugin as well as to determine where the commands defined in an `implementation` should go.
 The `plugin` variable should be a Class instance that inherits from `objection.utils.plugin.Plugin`.
 
-An example plugin may be seen in the objection test suite [here](https://github.com/sensepost/objection/blob/master/tests/data/plugin/__init__.py).
+### example plugins
+
+A few examples of plugins are available, and may be found at the following locations:
+
+- An example plugin in the objection test suite lives [here](https://github.com/sensepost/objection/blob/master/tests/data/plugin/__init__.py). This plugin bundles the Frida script sources as a global variable inside of the script, specifying the `script_src` attribute.
+- A plugin to side load Facebook's [Stetho](http://facebook.github.io/stetho/) is available [here](https://gist.github.com/leonjza/7fcc137f7f798ffca00ddf2bfef36b63). This plugin contains the Frida script sources as an `index.js` file next to the plugins `__init__.py` file, meaning the plugin loader will automatically detect the Frida script sources without specifying any attributes.
+- A clipboard monitoring plugin is available [here](https://github.com/SpeedyFireCyclone/objection-android-clipboard_ whereby the `index.js` is the result of a TypeScript project's compilation phase, also automatically loaded based in the Frida script's name. Larger plugin project's should consider using this method of building the Frida script sources.
 
 ## loading plugins
 
