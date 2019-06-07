@@ -51,7 +51,7 @@ pip3 install -U objection
 The most common error you are likely to face is one that might look as follows:
 
 ```
-~ # pip3 install objection
+~ # pip install objection
 Collecting objection
   Could not find a version that satisfies the requirement objection (from versions: )
 No matching distribution found for objection
