@@ -6,6 +6,7 @@ This wiki contains more information about how to install, use and understand `ob
 
 #### quick links
 * [Installation](Installation)
+* [Development Environment Installation](Development-Environment-Installation)
 * [Using objection](Using-objection)
 * [Patching iOS Applications](Patching-iOS-Applications)
 * [Patching Android Applications](Patching-Android-Applications)
