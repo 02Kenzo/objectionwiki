@@ -11,6 +11,7 @@
 - [Logging Information](Logging-Information)
 - [Resources](Resources)
 - [Hacking](Hacking)
+- [Development Environment Installation](Development-Environment-Installation)
 - [Agent Development Environment](Agent-Development-Environment)
 - [Plugins](Plugins)
 
