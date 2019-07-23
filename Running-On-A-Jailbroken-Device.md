@@ -3,21 +3,18 @@ If you have a jailbroken device, you can start `frida-server` after [installing 
 With everything installed, run `frida-ps -U` to list all of the processes on the device.
 
 ```txt
-~ » frida-ps -U
- PID  Name
-----  ----------------
-3202  App Store
-3004  Cydia
-3165  IPA Installer
- 371  Mail
-2844  Settings
-3167  AGXCompilerServi
+$ frida-ps -Uia
+PID  Name              Identifier
+---  ----------------  ---------------------------
+  -  App Store         com.apple.AppStore
+  -  Calendar          com.apple.mobilecal
+  -  Camera            com.apple.camera
 ```
 
-Great. That is all the information you need. Each of those "name"'s are what we refer to as Gadgets in objection. So, to "connect" to one of those apps, specify the name with the `--gadget` flag.
+Great. That is all the information you need. Each of those "Identifier"'s are what we refer to as Gadgets in objection. So, to "connect" to one of those apps, specify the name with the `--gadget` flag.
 
 ```txt
-~ » objection --gadget "App Store" explore
+~ » objection --gadget "com.apple.AppStore" explore
 
      _     _         _   _
  ___| |_  |_|___ ___| |_|_|___ ___
