@@ -11,7 +11,7 @@ PID  Name              Identifier
   -  Camera            com.apple.camera
 ```
 
-Great. That is all the information you need. Each of those "Identifier"'s are what we refer to as Gadgets in objection. So, to "connect" to one of those apps, specify the name with the `--gadget` flag.
+Great. That is all the information you need. Each of those "Identifier"'s are what we refer to as Gadgets in objection. So, to "connect" to one of those apps, specify the name with the `--gadget` flag after you launched the app on the device.
 
 ```txt
 ~ » objection --gadget "com.apple.AppStore" explore
