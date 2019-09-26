@@ -1,5 +1,3 @@
-## features
-
 Supporting both iOS and Android and having new features and improvements added regularly as the tool is used in real world scenarios, the following is a short list of only a few key features:
 
 For all supported platforms, `objection` allows you to:
