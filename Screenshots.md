@@ -1,5 +1,3 @@
-## screenshots
-
 The following screenshots show the main `objection` repl, connected to a test application on both an iPad running iOS 10.2.1, and Samsung Galaxy S5 running Android 6.
 
 ### A file system listing of the iOS applications main bundle
