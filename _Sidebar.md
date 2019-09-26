@@ -1,6 +1,7 @@
 ## Table of Contents
 - [Home](Home)
 - [Screenshots](Screenshots)
+- [Features](Features)
 
 ## Generic Guides
 - [Components](Components)
