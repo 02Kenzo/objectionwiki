@@ -58,7 +58,7 @@ The next part is to prepare the commands needed for the IPA patching process. `o
 
 * `applesign` - from: https://github.com/nowsecure/node-applesign
 * `insert_dylib` - from: https://github.com/Tyilo/insert_dylib
-* `security`, `codesign`, xcodebuild` - macOS/XCode commands
+* `security`, `codesign`, `xcodebuild` - macOS/XCode commands
 * `zip` & `unzip` - builtin, or just installed using `homebrew`
 * `7z` - installed using homebrew with `brew install p7zip`
 
