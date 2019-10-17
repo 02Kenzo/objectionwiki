@@ -26,6 +26,12 @@ $ adb shell pm list packages | grep uber
 package:com.ubercab
 ```
 
+You may also run this command with the `-f` flag to get the path of the app too, allowing you to skip the next step:
+
+```
+$ adb shell pm list packages -f -3 | cut -d "=" -f1 | grep uber
+```
+
 - With the package name known, determine its installed path on the device:
 
 ```txt
