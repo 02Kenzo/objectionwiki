@@ -26,4 +26,4 @@ What should be clear now is that this 'bypass' is purely a local bypass for when
 
 ## still confused?
 
-Issue [#136](https://github.com/sensepost/objection/issues/136#issuecomment-419664574) contains a more verbose explanation which may help clear more things up.
+Issue [#136](https://github.com/sensepost/objection/issues/136#issuecomment-419664574) contains a more verbose explanation which may help clear more things up. Additionally, [this](https://developer.apple.com/documentation/localauthentication/accessing_keychain_items_with_face_id_or_touch_id) Apple documentation link also describes the internals pretty well.
