@@ -36,6 +36,7 @@
 #### without root
 - [Patching Android Applications](Patching-Android-Applications)
 - [Running Patched Android Applications](Running-Patched-Android-Applications)
+- [Apktool Upgrades](Apktool-Upgrades)
 
 #### with root
 - [Running On A Rooted Device](Running-On-A-Rooted-Device)
