@@ -1,4 +1,4 @@
-Frida supports Gadget configurations and is documented [here](https://frida.re/docs/gadget/). By extension, `objection`'s patcher have support to add these configuration files when you patch applications.
+Frida supports Gadget configurations and is documented [here](https://frida.re/docs/gadget/). By extension, `objection`'s patchers have support to add these configuration files when you patch applications.
 
 The main configurations you may be interested in would typically be:
 
