@@ -8,13 +8,13 @@ The main configurations you may be interested in would typically be:
 
 # toc.
 
-- [gadget recap](quick-gadget-recap)
-- [gadget configuration](gadget-configuration)
-- [objection implementation](objection-implementation)
- - [android](android)
- - [ios](ios)
-- [embedding instrumentation](embedding-instrumentation)
-- [full android script embedding example](full-android-script-embedding-example)
+- [gadget recap](#quick-gadget-recap)
+- [gadget configuration](#gadget-configuration)
+- [objection implementation](#objection-implementation)
+ - [android](#android)
+ - [ios](#ios)
+- [embedding instrumentation](#embedding-instrumentation)
+- [full android script embedding example](#full-android-script-embedding-example)
 
 ## quick gadget recap
 
