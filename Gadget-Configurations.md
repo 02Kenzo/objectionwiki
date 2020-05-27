@@ -11,8 +11,8 @@ The main configurations you may be interested in would typically be:
 - [gadget recap](#quick-gadget-recap)
 - [gadget configuration](#gadget-configuration)
 - [objection implementation](#objection-implementation)
- - [android](#android)
- - [ios](#ios)
+  - [android](#android)
+  - [ios](#ios)
 - [embedding instrumentation](#embedding-instrumentation)
 - [full android script embedding example](#full-android-script-embedding-example)
 
@@ -24,7 +24,7 @@ Remember that when you patch an application on both iOS and Android, the platfor
 
 On either platform, when the gadget initialises it checks for a configuration file right next to the shared library with the same name as the shared library and the `.config` suffix. The configuration file comes in the form of a small JSON structure that looks as follows (and is also the defaults for the Gadget):
 
-```
+```json
 {
   "interaction": {
     "type": "listen",
@@ -41,14 +41,14 @@ For details about each of the keys, refer to the Frida Gadget documentation [her
 
 Depending on the platform you are patching, objection lets you specify a path to an optional configuration file you want to have embedded with the gadget. Typically this means you will have a file called something like `config.json` with your desired configuration. Next, you will tell the appropriate patcher that this is the configuration file to include with the `--gadget-config` flag. For example: 
 
-```
+```text
 objection patchipa -s app.ipa --gadget-config config.json
 ```
 
 ### android
 For Android and the `patchapk` sub command, the flags are detailed from the `--help` menu as:
 
-```
+```text
 $ objection patchapk --help
 Usage: objection patchapk [OPTIONS]
 
@@ -72,7 +72,7 @@ Options:
 ### ios
 For iOS and the `patchipa` sub command, the flags are detailed from the `--help` menu as:
 
-```
+```text
 $ objection patchipa --help
 
   [ ... ]
@@ -92,7 +92,7 @@ $ objection patchipa --help
 
 Running instrumentation in an autonomous manner can be done by setting the `type` as `script` and specifying the appropriate `path` value in the Gadget configuration file. For example, for Android:
 
-```
+```json
 {
   "interaction": {
     "type": "script",
@@ -103,7 +103,7 @@ Running instrumentation in an autonomous manner can be done by setting the `type
 
 Your instrumentation source needs to be specified with the `--script-source` flag, telling objection which file has the source for it. Next, to embed your instrumentation, run the patchapk command as follows (assuming your instrumentation lives in `index.js`:
 
-```
+```text
 objection patchapk -s app.apk -a armeabi-v7a -c config.json -l index.js
 ```
 
