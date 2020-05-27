@@ -16,6 +16,7 @@
 - [Development Environment Installation](Development-Environment-Installation)
 - [Agent Development Environment](Agent-Development-Environment)
 - [Plugins](Plugins)
+- [Gadget Configurations](Gadget-Configurations)
 
 ## iOS
 
