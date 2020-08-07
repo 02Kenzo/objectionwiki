@@ -1,0 +1,1 @@
+# Android APK Patching Tips
