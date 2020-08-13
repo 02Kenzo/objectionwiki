@@ -31,6 +31,10 @@ So the patcher failed, all is not lost yet! There are many reasons why this coul
 
 Read the error information, in **detail**. More often than not, the problem is clearly stated and you can fix it yourself.
 
+### check old issue reports
+
+Sometimes, your question has already been answered. This is a good search filter for issues that may relate to patching problems: https://github.com/sensepost/objection/issues?q=is%3Aissue+label%3Aapps+
+
 ### APK packing / unpacking
 
 Many errors could be caused by `apktool` not being able to unpack and repack the APK. Copy the target APK somewhere safe and run the `apktool d your.apk` and then `apktool b yourapk_path/` commands to see if that works. If it does, the next thing to try would be the objection command to [unpack](https://github.com/sensepost/objection/blob/1.9.5/objection/utils/patchers/android.py#L397-L405) and [repack](https://github.com/sensepost/objection/blob/1.9.5/objection/utils/patchers/android.py#L842-L849) APK's.
@@ -47,3 +51,4 @@ If you are able to unpack, but not repack the APK, this may be a perfect opportu
 By default, objection will try and find a launchable activity as the class to target for the `loadLibrary` [patch](https://github.com/sensepost/objection/blob/1.9.5/objection/utils/patchers/android.py#L646-L700). Sometimes, the patching process can fail either because it was not able to identify a launchable activity, or because objection could not find the smali location for the class. To combat this, the `patchapk` command has a `--target-class` [flag](https://github.com/sensepost/objection/blob/1.9.5/objection/console/cli.py#L338) where you could specify the fully qualified target class to use instead.
 
 A good candidate would be to use the class specified in the `android:name` tag in the Android Manifest. ref: https://developer.android.com/reference/android/app/Application
+
