@@ -31,7 +31,7 @@
 ### other
 - [Understanding the iOS Biometrics "Bypass"](Understanding-the-iOS-Biometrics-Bypass)
 - [Notes About The Keychain Dumper](Notes-About-The-Keychain-Dumper)
-- [Android APK Patching Tips](Android-APK-Patching-Tips)
+- [Android APK Patching](Android-APK-Patching)
 
 ## Android
 
