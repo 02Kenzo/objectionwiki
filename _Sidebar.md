@@ -31,7 +31,6 @@
 ### other
 - [Understanding the iOS Biometrics "Bypass"](Understanding-the-iOS-Biometrics-Bypass)
 - [Notes About The Keychain Dumper](Notes-About-The-Keychain-Dumper)
-- [Android APK Patching](Android-APK-Patching)
 
 ## Android
 
@@ -42,6 +41,9 @@
 
 #### with root
 - [Running On A Rooted Device](Running-On-A-Rooted-Device)
+
+### other
+- [Android APK Patching](Android-APK-Patching)
 
 ## API
 - [API Documentation](API)
